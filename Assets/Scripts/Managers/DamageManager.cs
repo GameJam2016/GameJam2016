@@ -7,7 +7,7 @@ public class DamageManager : MonoBehaviour
     public static DamageManager Instance = null;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         if (Instance != null)
         {
@@ -29,7 +29,7 @@ public class DamageManager : MonoBehaviour
     /// <param name="damageType">The type of damage that is being taken</param>
     /// <param name="damageDone">The amount of damage that is being sent</param>
     /// <param name="bIsStun">Is this damage going to stun the receiver</param>
-    public void SendDamage(DamageableObject damageSender, DamageableObject damageTo, attribute damageType, float damageDone, bool bIsStun)
+    public void SendDamage(GameObject damageSender, DamageableObject damageTo, attribute damageType, float damageDone, bool bIsStun)
     {
         // Checks whether we're strong, neutral or weak against the attack's attribute.
 

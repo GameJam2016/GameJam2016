@@ -15,19 +15,39 @@ public class PlayerInput : PlayerFunctionality
     {
         bIsGrounded = Grounded();
 
-        if( InputManager.Instance.GetKey("Right") || Input.GetKeyDown("right"))
+        if( InputManager.Instance.GetKey("Right") || Input.GetAxis("Horizontal") > 0)
         {
             MoveRight();
         }
 
-        else  if( InputManager.Instance.GetKey("Left") || Input.GetKeyDown("left"))
+        else  if( InputManager.Instance.GetKey("Left") || Input.GetAxis("Horizontal") < 0)
         {
             MoveLeft();
         }
+        else
+        {
+            Stop();
+        }
 
-        if(InputManager.Instance.GetKeyDown("Jump") || Input.GetKeyDown("space"))
+        if(InputManager.Instance.GetKey("Jump") || Input.GetKey("space"))
         {
             Jump();
+        }
+
+        if(InputManager.Instance.GetKey("Attack"))
+        {
+            GetComponent<PlayerStatus>().myAnimator.SetBool("Attacking", true);
+            Debug.Log("Attack");
+        }
+
+        if(InputManager.Instance.GetKey("Parry"))
+        {
+            Debug.Log("parry");
+        }
+
+        if(InputManager.Instance.GetKeyDown("Cast"))
+        {
+            CastSpell();
         }
     }
 
