@@ -11,20 +11,19 @@ public enum attribute
 
 public class Enemy : DamageableObject
 {
-    private Rigidbody2D myRigid;
-
-    [HideInInspector] public attribute myAttribute;
+    protected Rigidbody2D myRigid;
+    
     // Status effects.
-    [HideInInspector] public bool damaged, stunned, crowdControlled;
+    [HideInInspector] public bool damaged, stunned, crowdControlled, attacked;
 
     // Initial speed, current speed, speed of attacks, the amount of time before you can be cc'd again, the scalar 
     // for cc forces, the scalar for slow cc.
-    public float startSpeed, moveSpeed, attackSpeed, crowdTime, pushPullScalar, slowScalar;
+    public float damage, startSpeed, moveSpeed, attackSpeed, crowdTime, pushPullScalar, slowScalar;
 
 	// Use this for initialization
 	void Start ()
     {
-        myRigid = this.gameObject.GetComponent<Rigidbody2D>();
+        
 	}
 	
 	// Update is called once per frame
@@ -41,14 +40,14 @@ public class Enemy : DamageableObject
         bool stronger, weaker;
         
         // If we're weaker.
-        if (myAttribute - attackType == -1 || myAttribute - attackType == 2)
+        if (MyAttribute - attackType == -1 || MyAttribute - attackType == 2)
         {
             weaker = true;
             stronger = false;
         }
 
         // If we're stronger.
-        else if (myAttribute - attackType == 1 || myAttribute - attackType == -2)
+        else if (MyAttribute - attackType == 1 || MyAttribute - attackType == -2)
         {
             weaker = false;
             stronger = true;
@@ -166,6 +165,7 @@ public class Enemy : DamageableObject
     IEnumerator crowdControlling(float timeLimit)
     {
         float timePassed = 0;
+        stunned = true;
         crowdControlled = true;
         do
         {
@@ -173,17 +173,32 @@ public class Enemy : DamageableObject
             yield return null;
         } while (timePassed <= timeLimit);
         crowdControlled = false;
+        stunned = false;
     }
 
     IEnumerator slow(float timeLimit, float theSlow)
     {
         float timePassed = 0;
-        moveSpeed -= theSlow;
+        moveSpeed = moveSpeed / theSlow;
+        stunned = true;
         do
         {
             timePassed += Time.deltaTime;
             yield return null;
         } while (timePassed <= timeLimit);
-        moveSpeed = startSpeed;
+        moveSpeed = moveSpeed * theSlow;
+        stunned = false;
+    }
+
+    public IEnumerator attackCooldown (float timeLimit)
+    {
+        float timePassed = 0;
+        attacked = true;
+        do
+        {
+            timePassed += Time.deltaTime;
+            yield return null;
+        } while (timePassed <= timeLimit);
+        attacked = false;
     }
 }
