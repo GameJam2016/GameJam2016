@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: c69f3366ce94a564485a0e28ae204877
+folderAsset: yes
+timeCreated: 1454127868
+=======
 guid: a653b628a35c39749886bf6b016dc0e3
 folderAsset: yes
 timeCreated: 1454143457
+>>>>>>> origin/Taylor'sBranch
 licenseType: Free
 DefaultImporter:
   userData: 
