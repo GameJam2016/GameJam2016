@@ -43,19 +43,20 @@ public class OffensiveHoly : MonoBehaviour {
 
     void Beam()
     {
-       float position = Random.Range(minRange,MaxRange);
-        
-        RaycastHit hit;
-       if (Physics.Raycast(player.transform.position + new Vector3(position * direction, 20, 0), new Vector3(0, -1, 0),  out hit))
-       {
-           Debug.DrawLine(player.transform.position + new Vector3(position, 20 * direction, 0), hit.point, Color.white, 100);
-          if(hit.collider.gameObject.tag == "Enemy")
-          {
-              DamageManager.Instance.SendDamage(this.gameObject, hit.collider.gameObject.GetComponent<Enemy>(), attribute.Holy, Damage, false);
-          }
-           
-       }
+        float position = Random.Range(minRange, MaxRange);
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(position * direction + player.transform.position.x, 20), new Vector2(0, -1));
 
-        
-    }
+        if (!hit)
+    //        return;
+        Debug.DrawLine(player.transform.position + new Vector3(position, 20 * direction, 0), hit.point, Color.white, 100);
+        Debug.Log(hit.collider.tag);
+        if (hit.collider.gameObject.tag == "Enemy")
+        {
+      //      hit.collider.gameObject.GetComponent<Enemy>().Health -= Damage;
+            DamageManager.Instance.SendDamage(this.gameObject, hit.collider.gameObject.GetComponent<Enemy>(), attribute.Holy, Damage, false);
+        }
+
+     }
+
+      
 }

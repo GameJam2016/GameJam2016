@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OffensiveDenomic : MonoBehaviour {
+public class OffensiveDemonic : MonoBehaviour
+{
 
     GameObject player;
     public int direction;
     public float Damage;
     public float maxRange;
-   public  RaycastHit[] hits;
+   public  RaycastHit2D[] hits;
 
 	// Use this for initialization
 	void Start () {
@@ -20,18 +21,19 @@ public class OffensiveDenomic : MonoBehaviour {
             direction = 1;
 
         Debug.DrawLine(player.transform.position, player.transform.position + new Vector3(player.transform.position.x + (maxRange * direction), player.transform.position.y, player.transform.position.z), Color.white, 100);
-
-        if (Physics.Raycast(player.transform.position, new Vector3(direction, 0, 0), maxRange))
+        hits = Physics2D.RaycastAll(player.transform.position, new Vector3(direction, 0, 0));
+    
+        for (int i = 0; i < hits.Length; i++)
         {
-            for (int i = 0; i < hits.Length; i++)
+            if (hits[i].collider.gameObject.tag == "Enemy")
             {
-                if (hits[i].collider.gameObject.tag == "Enemy")
-                {
-                    DamageManager.Instance.SendDamage(this.gameObject, hits[i].collider.gameObject.GetComponent<Enemy>(), attribute.Holy, Damage, false);
-                }
+                Debug.Log(hits[i].collider.gameObject.tag);
+             //   hits[i].collider.gameObject.GetComponent<Enemy>().Health -= Damage;
+                DamageManager.Instance.SendDamage(this.gameObject, hits[i].collider.gameObject.GetComponent<Enemy>(), attribute.Demonic, Damage, false);
             }
-
         }
+
+        
 	}
 	
 	// Update is called once per frame
