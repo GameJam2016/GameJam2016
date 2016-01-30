@@ -7,6 +7,11 @@ public class PlayerFunctionality : MonoBehaviour
     public float yJumpForce;
     private Rigidbody2D thisRigidBody;
     public bool bIsGrounded;
+    public bool bOnLadder = false;
+
+    private int currentSpell = 0;
+    public bool bHasJumped = false;
+    public bool bIsAttacking = false;
     [SerializeField] float groundCheckRange = 1.0f;
 	
 
@@ -19,11 +24,23 @@ public class PlayerFunctionality : MonoBehaviour
     //movement
     public void MoveLeft()
     {
+        if(bIsAttacking)
+        {
+            Stop();
+            return;
+        }
+        transform.localScale = new Vector3(-1, 1, 1);
         thisRigidBody.velocity = new Vector2(-xMoveSpeed, thisRigidBody.velocity.y);
     }
 
     public void MoveRight()
     {
+        if (bIsAttacking)
+        {
+            Stop();
+            return;
+        }
+        transform.localScale = new Vector3(1, 1, 1);
         thisRigidBody.velocity = new Vector2(xMoveSpeed, thisRigidBody.velocity.y);
     }
     
@@ -34,18 +51,70 @@ public class PlayerFunctionality : MonoBehaviour
 
     public void Jump()
     {
-        if(bIsGrounded)
+        if(bIsGrounded || bOnLadder)
         {
+            bOnLadder = false;
+            StartCoroutine(COJumped());
             thisRigidBody.velocity = new Vector2(thisRigidBody.velocity.x, yJumpForce);
         }
     } 
 
     public void CastSpell()
     {
-        Instantiate(GetComponent<PlayerStatus>().MySpells[0], transform.position, transform.rotation);
+        if(!GetComponent<PlayerStatus>().MySpells[currentSpell])
+        {
+            return;
+        }
+        Instantiate(GetComponent<PlayerStatus>().MySpells[currentSpell], transform.position, transform.rotation);
 
     }
 
+    public void ChangeSpellRight()
+    {
+        currentSpell++;
+        if (currentSpell > 14 || !GetComponent<PlayerStatus>().MySpells[currentSpell])
+        {
+            currentSpell = 0;
+        }
+    }
+
+    public void ChangeSpellLeft()
+    {
+        currentSpell--;
+        if(currentSpell < 0)
+        {
+            currentSpell = 14;
+        }
+        while(!GetComponent<PlayerStatus>().MySpells[currentSpell])
+        {
+            currentSpell--;
+        }
+    }
+
+
+    public void MoveUpLadder()
+    {
+        if (!bOnLadder)
+            return;
+        
+        thisRigidBody.velocity = new Vector2(thisRigidBody.velocity.x, xMoveSpeed);
+    }
+
+    public void MoveDownLadder()
+    {
+        if (!bOnLadder)
+            return;
+
+        thisRigidBody.velocity = new Vector2(thisRigidBody.velocity.x, -xMoveSpeed);
+    }
+
+    public void StopLadderMove()
+    {
+        if (!bOnLadder)
+            return;
+
+        thisRigidBody.velocity = new Vector2(0, 0);
+    }
     //grounded Check
     public bool Grounded()
     {
@@ -65,5 +134,32 @@ public class PlayerFunctionality : MonoBehaviour
         //    return false;
         //}
 
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.tag == "Ladder" && Input.GetAxis("Vertical") != 0)
+        {
+            if (bHasJumped)
+            {
+                return;
+            }
+            transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, transform.position.z);
+            bOnLadder = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Ladder")
+        {
+            bOnLadder = false;  
+        }
+    }
+
+    IEnumerator COJumped()
+    {
+        bHasJumped = true;
+        yield return new WaitForSeconds(0.5f);
+        bHasJumped = false;
     }
 }
