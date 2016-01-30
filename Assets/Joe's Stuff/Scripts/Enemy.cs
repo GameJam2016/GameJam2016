@@ -9,7 +9,7 @@ public enum attribute
 };
 
 
-public class Enemy : MonoBehaviour
+public class Enemy : DamageableObject
 {
     private Rigidbody2D myRigid;
 
