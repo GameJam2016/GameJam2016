@@ -5,6 +5,7 @@ public class PlayerStatus : DamageableObject
 {
     public float Mana = 0;
     public float MaxMana = 50;
+    public bool bIsInvisible = false;
     public GameObject[] MySpells = new GameObject[15];
     public Animator myAnimator;
 
@@ -18,11 +19,15 @@ public class PlayerStatus : DamageableObject
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.A))
+    }
+
+    public void AddSpell(int num)
+    {
+        for (int j = 0; j < num; j++)
         {
-            for(int i  = 0; i < MySpells.Length; i++)
+            for (int i = 0; i < MySpells.Length; i++)
             {
-                if(!MySpells[i])
+                if (!MySpells[i])
                 {
                     MySpells[i] = GameObject.FindGameObjectWithTag("Cards").GetComponent<Cards>().CreateCard();
                     if (MySpells[i])
@@ -33,6 +38,5 @@ public class PlayerStatus : DamageableObject
                 }
             }
         }
-
     }
 }

@@ -31,6 +31,7 @@ public class DefensiveNatural : Spell
         if(m_Player.GetComponent<DamageableObject>().Health > m_StartHealth)
         {
             m_Player.GetComponent<DamageableObject>().Health = m_StartHealth;
+            
         }
     }
 
