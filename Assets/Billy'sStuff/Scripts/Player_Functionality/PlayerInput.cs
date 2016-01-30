@@ -17,6 +17,7 @@ public class PlayerInput : PlayerFunctionality
 
         if( InputManager.Instance.GetKey("Right") || Input.GetAxis("Horizontal") > 0)
         {
+            transform.localScale = new Vector3(1, 1, 1);
             MoveRight();
         }
 
@@ -50,8 +51,10 @@ public class PlayerInput : PlayerFunctionality
 
         if(InputManager.Instance.GetKey("Attack"))
         {
-            GetComponent<PlayerStatus>().myAnimator.SetBool("Attacking", true);
-            Debug.Log("Attack");
+            if (!bIsAttacking)
+            {
+                GetComponent<PlayerStatus>().myAnimator.SetBool("Attacking", true);
+            }
         }
 
         if(InputManager.Instance.GetKey("Parry"))
@@ -63,6 +66,18 @@ public class PlayerInput : PlayerFunctionality
         {
             CastSpell();
         }
+
+        if (InputManager.Instance.GetKeyDown("LeftBumper"))
+        {
+            ChangeSpellLeft();
+        }
+        if (InputManager.Instance.GetKey("RightBumper"))
+        {
+            ChangeSpellRight();
+        }
+
+        bIsAttacking = GetComponent<PlayerStatus>().myAnimator.GetBool("Attacking");
+        GetComponent<PlayerStatus>().myAnimator.SetFloat("Speed", Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x));
     }
 
 }

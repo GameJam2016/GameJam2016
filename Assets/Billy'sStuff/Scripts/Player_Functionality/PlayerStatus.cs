@@ -23,7 +23,7 @@ public class PlayerStatus : DamageableObject
 
     public void AddSpell(int num)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < num; j++)
         {
             for (int i = 0; i < MySpells.Length; i++)
             {
