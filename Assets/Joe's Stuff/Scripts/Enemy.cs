@@ -15,9 +15,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public attribute myAttribute;
     [HideInInspector] public bool damaged, stunned;
 
-    public float startHealth;
-    public float startSpeed;
-    public float attackSpeed;
+    public float startHealth, startSpeed, attackSpeed, damageTime;
 
 	// Use this for initialization
 	void Start ()
@@ -66,11 +64,29 @@ public class Enemy : MonoBehaviour
             stunned = true;
         }
 
-        damaged = true;
+        if (!damaged)
+        {
+            StartCoroutine(damageCooldown(damageTime));
+        }
     }
 
     public void die ()
     {
         Destroy(this.gameObject);
+    }
+
+    // This coroutine is called when we take damage, and when our damagecooldown has passed, sets damaged to true.
+    // This tells would-be damagers that we're ready to take further bruising.
+    IEnumerator damageCooldown (float timeLimit)
+    {
+        float timePassed = 0;
+        damaged = true;
+        do
+        {
+            timePassed += Time.deltaTime;
+            yield return null;
+        }while (timePassed < timeLimit);
+
+        damaged = false;
     }
 }
