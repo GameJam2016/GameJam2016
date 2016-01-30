@@ -12,7 +12,7 @@ public enum attribute
 public class Enemy : DamageableObject
 {
     protected Rigidbody2D myRigid;
-    
+    protected GameObject player;
     // Status effects.
     [HideInInspector] public bool damaged, stunned, crowdControlled, attacked;
 
@@ -118,7 +118,7 @@ public class Enemy : DamageableObject
 
             }
 
-            // We get a vector away from the Holy CC, scaled by the pushPullScalar and the mana cost.
+            // We get a vector towards the Demonic CC, scaled by the pushPullScalar and the mana cost.
             toSource = toSource.normalized * pushPullScalar * manaCost;
 
             // We then add a force equal to this vector to ourselves, pulling ourselves in.
@@ -162,6 +162,7 @@ public class Enemy : DamageableObject
         Destroy(this.gameObject);
     }
 
+    // How long we are crowd controlled.
     IEnumerator crowdControlling(float timeLimit)
     {
         float timePassed = 0;
@@ -176,6 +177,7 @@ public class Enemy : DamageableObject
         stunned = false;
     }
 
+    // How long we are slowed.
     IEnumerator slow(float timeLimit, float theSlow)
     {
         float timePassed = 0;
@@ -190,6 +192,7 @@ public class Enemy : DamageableObject
         stunned = false;
     }
 
+    // How long before we can attack again.
     public IEnumerator attackCooldown (float timeLimit)
     {
         float timePassed = 0;
