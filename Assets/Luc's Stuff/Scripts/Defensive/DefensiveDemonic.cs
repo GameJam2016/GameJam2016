@@ -24,11 +24,13 @@ public class DefensiveDemonic : Spell
             yield return null;
         }
         sprite.enabled = false;
+        m_Player.GetComponent<PlayerStatus>().bIsInvisible = true;
         //  MeshRenderer render = m_Player.GetComponent<MeshRenderer>();
         //   render.enabled = false;
         yield return new WaitForSeconds(InvisTime);
         //render.enabled = true;
         sprite.enabled = true;
+        m_Player.GetComponent<PlayerStatus>().bIsInvisible = false;
     }
 
 

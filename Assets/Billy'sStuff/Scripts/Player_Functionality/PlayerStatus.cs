@@ -5,6 +5,7 @@ public class PlayerStatus : DamageableObject
 {
     public float Mana = 0;
     public float MaxMana = 50;
+    public bool bIsInvisible = false;
     public GameObject[] MySpells = new GameObject[15];
     public Animator myAnimator;
 

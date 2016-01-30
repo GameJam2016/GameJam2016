@@ -7,6 +7,7 @@ public class PlayerFunctionality : MonoBehaviour
     public float yJumpForce;
     private Rigidbody2D thisRigidBody;
     public bool bIsGrounded;
+    public bool bOnLadder = false;
     [SerializeField] float groundCheckRange = 1.0f;
 	
 
@@ -36,16 +37,44 @@ public class PlayerFunctionality : MonoBehaviour
     {
         if(bIsGrounded)
         {
+            bOnLadder = false;
             thisRigidBody.velocity = new Vector2(thisRigidBody.velocity.x, yJumpForce);
         }
     } 
 
     public void CastSpell()
     {
+        if(!GetComponent<PlayerStatus>().MySpells[0])
+        {
+            return;
+        }
         Instantiate(GetComponent<PlayerStatus>().MySpells[0], transform.position, transform.rotation);
 
     }
 
+    public void MoveUpLadder()
+    {
+        if (!bOnLadder)
+            return;
+        
+        thisRigidBody.velocity = new Vector2(thisRigidBody.velocity.x, xMoveSpeed);
+    }
+
+    public void MoveDownLadder()
+    {
+        if (!bOnLadder)
+            return;
+
+        thisRigidBody.velocity = new Vector2(thisRigidBody.velocity.x, -xMoveSpeed);
+    }
+
+    public void StopLadderMove()
+    {
+        if (!bOnLadder)
+            return;
+
+        thisRigidBody.velocity = new Vector2(0, 0);
+    }
     //grounded Check
     public bool Grounded()
     {
@@ -66,4 +95,21 @@ public class PlayerFunctionality : MonoBehaviour
         //}
 
     }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.tag == "Ladder" && Input.GetAxis("Vertical") != 0)
+        {
+            transform.position = new Vector3(other.gameObject.transform.position.x, transform.position.y, transform.position.z);
+            bOnLadder = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Ladder")
+        {
+            bOnLadder = false;
+        }
+    }
+
 }

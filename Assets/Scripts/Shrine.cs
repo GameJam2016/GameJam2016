@@ -11,7 +11,9 @@ public class Shrine : MonoBehaviour
             if(FirstTime)
             {
                 other.gameObject.GetComponent<PlayerStatus>().AddSpell(3);
+                FirstTime = false;
             }
+           
         }
     }
 }

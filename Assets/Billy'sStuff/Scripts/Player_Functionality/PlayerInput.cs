@@ -29,7 +29,21 @@ public class PlayerInput : PlayerFunctionality
             Stop();
         }
 
-        if(InputManager.Instance.GetKey("Jump") || Input.GetKey("space"))
+        if (Input.GetAxis("Vertical") > 0)
+        {
+            MoveUpLadder();
+        }
+
+        else if (Input.GetAxis("Vertical") < 0)
+        {
+            MoveDownLadder();
+        }
+        else
+        {
+            StopLadderMove();
+        }
+
+        if (InputManager.Instance.GetKey("Jump") || Input.GetKey("space"))
         {
             Jump();
         }
