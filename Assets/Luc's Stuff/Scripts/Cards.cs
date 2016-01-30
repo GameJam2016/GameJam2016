@@ -5,31 +5,27 @@ public class Cards : MonoBehaviour {
 
  //   public int damageMin, DamageMax;
     public int playerCurrentMaxMana = 200;
-    
     public enum typeOfCard
     {
         Offense,
         Support,
         Defense
     }
-    public enum AttributeOfCard
-    {
-        Holy,
-        Denomic,
-        Natural,
-    }
+      
+    
 
-    public int damage;
+
+    public float damage;
     public int manacost;
-    public int DefensivePower;
+    public float DefensivePower;
     public float CCduration;
     public typeOfCard typeOfThisCard;
-    public AttributeOfCard AttributeOfThisCard;
+    public attribute AttributeOfThisCard;
     public string discription;
     
     public void spell()
     {
-
+        
     }
 
 	void Start () {
@@ -67,13 +63,13 @@ public class Cards : MonoBehaviour {
         switch (AttributeCardRandomizer)
         {
             case 0:
-                AttributeOfThisCard = AttributeOfCard.Denomic;
+                AttributeOfThisCard = attribute.Demonic;
                 break;
             case 1:
-                   AttributeOfThisCard = AttributeOfCard.Holy;
+                AttributeOfThisCard = attribute.Holy;
                 break;
             case 2:
-                   AttributeOfThisCard = AttributeOfCard.Natural;
+                AttributeOfThisCard = attribute.Natural;
                 break;
         }
     }
@@ -84,4 +80,17 @@ public class Cards : MonoBehaviour {
         manacost = Random.Range(1, playerCurrentMaxMana);
         typeAtrributeInitialize();
     }
+
+    //spells
+    public GameObject OffensiveHoly;
+    public GameObject OffensiveDenomic;
+    public GameObject OffensiveNatural;
+    public GameObject DefensiveHoly;
+    public GameObject DefensiveDenomic;
+    public GameObject DefensiveNatural;
+    public GameObject SupportHoly;
+    public GameObject SupportDenomic;
+    public GameObject SupportNatural;
+
+
 }
