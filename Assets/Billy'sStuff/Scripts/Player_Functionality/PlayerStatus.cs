@@ -18,11 +18,15 @@ public class PlayerStatus : DamageableObject
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.A))
+    }
+
+    public void AddSpell(int num)
+    {
+        for (int j = 0; j < 3; j++)
         {
-            for(int i  = 0; i < MySpells.Length; i++)
+            for (int i = 0; i < MySpells.Length; i++)
             {
-                if(!MySpells[i])
+                if (!MySpells[i])
                 {
                     MySpells[i] = GameObject.FindGameObjectWithTag("Cards").GetComponent<Cards>().CreateCard();
                     if (MySpells[i])
@@ -33,6 +37,5 @@ public class PlayerStatus : DamageableObject
                 }
             }
         }
-
     }
 }
