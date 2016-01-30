@@ -8,6 +8,7 @@ TagManager:
   - Cards
   - SpellSlots
   - Spell
+  - Ladder
   layers:
   - Default
   - TransparentFX
