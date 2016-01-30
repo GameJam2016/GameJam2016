@@ -67,15 +67,6 @@ public class PlayerInput : PlayerFunctionality
             CastSpell();
         }
 
-        if (InputManager.Instance.GetKeyDown("LeftBumper"))
-        {
-            ChangeSpellLeft();
-        }
-        if (InputManager.Instance.GetKey("RightBumper"))
-        {
-            ChangeSpellRight();
-        }
-
         bIsAttacking = GetComponent<PlayerStatus>().myAnimator.GetBool("Attacking");
         GetComponent<PlayerStatus>().myAnimator.SetFloat("Speed", Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.x));
     }

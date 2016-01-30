@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class InventoryHandler : MonoBehaviour
 {
+
     public GameObject[] InvetoryButtons;
     public GameObject[] EquiptedSpells;
     public GameObject ButtonTemplate;
@@ -34,6 +35,13 @@ public class InventoryHandler : MonoBehaviour
     void Update()
     {
         CancelSelectedSpell();
+
+        if(InputManager.Instance.GetKeyDown("ExitInventory"))
+        {
+            SpellManagerObject.GetComponent<SpellManager>().InventoryOpen = false;
+            FinalizeCustomizationOfSpells();
+        }
+
     }
 
     public void StartInventory()
@@ -41,7 +49,11 @@ public class InventoryHandler : MonoBehaviour
         
         for (int i = 0; i < InvetoryButtons.Length; i++)
         {
-            //InvetoryButtons[i].GetComponent<Image>().sprite = Player.GetComponent<PlayerStatus>().MySpells[i].GetComponent<Image>().sprite;
+            if (Player.GetComponent<PlayerStatus>().MySpells[i])
+            {
+                InvetoryButtons[i].GetComponent<Image>().sprite = Player.GetComponent<PlayerStatus>().MySpells[i].GetComponent<Spell>().SpellImage.sprite;
+               
+            }
         }
         AvailableSpellSlots();
     }
@@ -117,6 +129,13 @@ public class InventoryHandler : MonoBehaviour
         if(SelectedSpell && EventSystem.current.currentSelectedGameObject.tag == "SpellSlots")
         {
             EquiptedSpells[int.Parse(EventSystem.current.currentSelectedGameObject.name)].GetComponent<Image>().sprite = SelectedSpell.GetComponent<Image>().sprite;
+            for(int i = 0; i < InvetoryButtons.Length; i++)
+            {
+                if(SelectedSpell == InvetoryButtons[i])
+                {
+                    SpellManagerObject.GetComponent<SpellManager>().Spells[int.Parse(EventSystem.current.currentSelectedGameObject.name)] = Player.GetComponent<PlayerStatus>().MySpells[i];
+                }
+            }
         }
     }
 
