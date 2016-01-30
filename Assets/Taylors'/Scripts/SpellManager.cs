@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+
 //This is a UI Script
 
 public class SpellManager : MonoBehaviour
@@ -16,13 +17,14 @@ public class SpellManager : MonoBehaviour
 
     [SerializeField]private int CurrentRevolverSlot = 0;
 
+
     public Animator RevolverAnimator;
 	// Use this for initialization
 	void Start ()
     {
         UpdateSpellSlots();
-        IncreaseSpellRevolverSize();
-	}
+        //IncreaseSpellRevolverSize();
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -54,7 +56,7 @@ public class SpellManager : MonoBehaviour
     void RotateAbilityRevolver()
     {
         //This changes the revolvers 
-        if (Input.GetKeyDown(KeyCode.P) && canChangeSpell == true)//right
+        if (InputManager.Instance.GetKeyDown("RevolverLeft") && canChangeSpell == true)//right
         {
             canChangeSpell = false;
             StartCoroutine(SpellChangeDelay());
@@ -138,7 +140,7 @@ public class SpellManager : MonoBehaviour
                     break;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.O) && canChangeSpell == true)//left
+        else if (InputManager.Instance.GetKeyDown("RevolverRight") && canChangeSpell == true)//left
         {
             canChangeSpell = false;
             StartCoroutine(SpellChangeDelay());
