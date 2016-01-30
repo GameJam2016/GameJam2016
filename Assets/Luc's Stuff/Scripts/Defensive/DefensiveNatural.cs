@@ -35,9 +35,11 @@ public class DefensiveNatural : Spell
     }
 
 
-    public override void Randomize()
+
+    public override void Randomize(PlayerStatus status)
     {
-        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+
+        ManaCost = Random.Range(0.0f, status.MaxMana);
         HealAmount = ManaCost / 5.0f;
     }
 }

@@ -18,22 +18,24 @@ public class DefensiveDemonic : Spell
 
     IEnumerator COInvis()
     {
-        //SpriteRenderer sprite = m_Player.GetComponentInParent<SpriteRenderer>();
-        //if(!sprite)
-        //{
-        //    yield return null;
-        //}
-        //sprite.enabled = false;
-        MeshRenderer render = m_Player.GetComponent<MeshRenderer>();
-        render.enabled = false;
+        SpriteRenderer sprite = m_Player.GetComponentInChildren<SpriteRenderer>();
+        if (!sprite)
+        {
+            yield return null;
+        }
+        sprite.enabled = false;
+        //  MeshRenderer render = m_Player.GetComponent<MeshRenderer>();
+        //   render.enabled = false;
         yield return new WaitForSeconds(InvisTime);
-        render.enabled = true;
-      //  sprite.enabled = true;
+        //render.enabled = true;
+        sprite.enabled = true;
     }
 
-    public override void Randomize()
+
+    public override void Randomize(PlayerStatus status)
     {
-        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+
+        ManaCost = Random.Range(0.0f, status.MaxMana);
         HealAmount = ManaCost / 5.0f;
     }
 }

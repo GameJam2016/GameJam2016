@@ -7,7 +7,7 @@ public class PlayerFunctionality : MonoBehaviour
     public float yJumpForce;
     private Rigidbody2D thisRigidBody;
     public bool bIsGrounded;
-    [SerializeField] float groundCheckRange = 0.5f;
+    [SerializeField] float groundCheckRange = 1.0f;
 	
 
     // Use this for initialization
@@ -49,8 +49,9 @@ public class PlayerFunctionality : MonoBehaviour
     //grounded Check
     public bool Grounded()
     {
-       // RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, -Vector2.up, groundCheckRange, ~(1 << LayerMask.NameToLayer("Player")));
+        // RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, -Vector2.up, groundCheckRange, ~(1 << LayerMask.NameToLayer("Player")));
 
+        Debug.DrawRay(transform.position, -Vector2.up, Color.red, 1.0f);
 
         return Physics2D.Raycast(gameObject.transform.position, -Vector2.up, groundCheckRange, ~(1 << LayerMask.NameToLayer("Player")));
 

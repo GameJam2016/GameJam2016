@@ -36,6 +36,7 @@ public class PlayerInput : PlayerFunctionality
 
         if(InputManager.Instance.GetKey("Attack"))
         {
+            GetComponent<PlayerStatus>().myAnimator.SetBool("Attacking", true);
             Debug.Log("Attack");
         }
 

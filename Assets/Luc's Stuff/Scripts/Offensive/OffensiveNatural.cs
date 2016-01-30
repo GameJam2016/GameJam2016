@@ -10,19 +10,21 @@ public class OffensiveNatural : Spell {
     public float switcher;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         this.GetComponent<CircleCollider2D>().radius = Radius;
         player = GameObject.FindGameObjectWithTag("Player");
 
   
-            StartCoroutine(Pulse());
+     StartCoroutine(Pulse());
+        Destroy(this.gameObject, 3);
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
         this.transform.position = player.transform.position;
-            Destroy(this.gameObject,3);
+            
         
         
 
@@ -48,9 +50,11 @@ public class OffensiveNatural : Spell {
     }
 
 
-    public override void Randomize() 
+
+    public override void Randomize(PlayerStatus status)
     {
-        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+
+        ManaCost = Random.Range(0.0f, status.MaxMana);
         Damage = ManaCost * 5;
     }
 }

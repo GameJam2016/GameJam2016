@@ -48,9 +48,9 @@ public class OffensiveHoly : Spell
         float position = Random.Range(minRange, MaxRange);
         RaycastHit2D hit = Physics2D.Raycast(new Vector2(position * direction + player.transform.position.x, 20), new Vector2(0, -1));
 
-        if (!hit)
+    //    if (!hit)
     //        return;
-        Debug.DrawLine(player.transform.position + new Vector3(position, 20 * direction, 0), hit.point, Color.white, 100);
+        Debug.DrawLine(player.transform.position + new Vector3(position, 20 * direction, 0), hit.point, Color.red, 100);
         Debug.Log(hit.collider.tag);
         if (hit.collider.gameObject.tag == "Enemy")
         {
@@ -61,9 +61,11 @@ public class OffensiveHoly : Spell
      }
 
 
-    public override void Randomize()
+
+    public override void Randomize(PlayerStatus status)
     {
-        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+
+        ManaCost = Random.Range(0.0f, status.MaxMana);
         Damage = ManaCost * 5;
     }
 }
