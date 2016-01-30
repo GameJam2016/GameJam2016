@@ -40,7 +40,7 @@ public class Wisp : Enemy
     {
         if (other.gameObject.tag == "Player" && !stunned)
         {
-            DamageManager.Instance.SendDamage(this.gameObject.GetComponent<DamageableObject>(), other.gameObject.GetComponent<DamageableObject>(), MyAttribute, damage, false);
+            DamageManager.Instance.SendDamage(this.gameObject, other.gameObject.GetComponent<DamageableObject>(), MyAttribute, damage, false);
         }
     }
 
