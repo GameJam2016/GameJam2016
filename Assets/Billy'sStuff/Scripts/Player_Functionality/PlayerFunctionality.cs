@@ -26,6 +26,11 @@ public class PlayerFunctionality : MonoBehaviour
     {
         thisRigidBody.velocity = new Vector2(xMoveSpeed, thisRigidBody.velocity.y);
     }
+    
+    public void Stop()
+    {
+        thisRigidBody.velocity = new Vector2(0, thisRigidBody.velocity.y);
+    }
 
     public void Jump()
     {
@@ -34,6 +39,12 @@ public class PlayerFunctionality : MonoBehaviour
             thisRigidBody.velocity = new Vector2(thisRigidBody.velocity.x, yJumpForce);
         }
     } 
+
+    public void CastSpell()
+    {
+        Instantiate(GetComponent<PlayerStatus>().MySpells[0], transform.position, transform.rotation);
+
+    }
 
     //grounded Check
     public bool Grounded()

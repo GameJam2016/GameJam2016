@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DefensiveHoly : MonoBehaviour
+public class DefensiveHoly : Spell
 {
 
     public float HealAmount = 15.0f;
@@ -49,5 +49,13 @@ public class DefensiveHoly : MonoBehaviour
             }
         }
         StartCoroutine(COHealPulse());
+    }
+
+
+    public override void Randomize()
+    {
+        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+        HealAmount = ManaCost / 5.0f;
+
     }
 }

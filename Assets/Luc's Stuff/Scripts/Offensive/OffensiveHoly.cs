@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OffensiveHoly : MonoBehaviour {
+public class OffensiveHoly : Spell
+{
 
     public int minRange;
     public int MaxRange;
@@ -17,6 +18,7 @@ public class OffensiveHoly : MonoBehaviour {
         beamNumber = 0;
         duration = 0;
         player = GameObject.FindGameObjectWithTag("Player");
+        
         if (player.transform.localScale.x < 0)
             direction = -1;
         else if (player.transform.localScale.x > 0)
@@ -58,5 +60,10 @@ public class OffensiveHoly : MonoBehaviour {
 
      }
 
-      
+
+    public override void Randomize()
+    {
+        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+        Damage = ManaCost * 5;
+    }
 }

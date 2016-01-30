@@ -3,56 +3,35 @@ using System.Collections;
 
 public class PlayerStatus : DamageableObject
 {
+    public float Mana = 0;
+    public float MaxMana = 50;
+    public GameObject[] MySpells = new GameObject[15];
 
-    public attribute myAttribute;
-    public float MaxHealth, currentHealth;
-    public bool damaged, stunned;
-
-    
-
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-	
-	}
 
-
-    public void takeDamage(float damage, attribute attackType, bool stun)
-    {
-        //if we're stronger
-        if(myAttribute - attackType == -1 || myAttribute - attackType == 2)
-        {
-            //halve damage
-            currentHealth -= damage / 2;
-        }
-
-        //if we're weaker 
-        else if(myAttribute - attackType == 1 || myAttribute - attackType == -2)
-        {
-            //double damage
-            currentHealth -= damage * 2;
-        }
-        //if we're the same attribute
-        else
-        {
-
-        }
-
-        if(stun)
-        {
-            stunned = true;
-        }
-        damaged = true;
     }
 
-    public void die()
+    // Update is called once per frame
+    void Update()
     {
-        Destroy(this.gameObject);
+
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            for(int i  = 0; i < MySpells.Length; i++)
+            {
+                if(!MySpells[i])
+                {
+                    MySpells[i] = GameObject.FindGameObjectWithTag("Cards").GetComponent<Cards>().CreateCard();
+                    if (MySpells[i])
+                    {
+                        MySpells[i].GetComponent<Spell>().Randomize();
+                    }
+                    break;
+                }
+            }
+        }
+
     }
 }

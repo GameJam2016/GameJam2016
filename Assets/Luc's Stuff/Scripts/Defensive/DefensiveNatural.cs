@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DefensiveNatural : MonoBehaviour {
+public class DefensiveNatural : Spell
+{
 
     public float HealAmount = 15.0f;
     public float ShieldTime = 2.0f;
@@ -12,8 +13,8 @@ public class DefensiveNatural : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        m_Player = GameObject.FindGameObjectWithTag("Player"); 
-    
+        m_Player = GameObject.FindGameObjectWithTag("Player");
+
         m_Player.GetComponent<DamageableObject>().Health += HealAmount;
         m_StartHealth = m_Player.GetComponent<DamageableObject>().Health;
         m_Player.GetComponent<DamageableObject>().Health += ShieldAmount;
@@ -31,5 +32,12 @@ public class DefensiveNatural : MonoBehaviour {
         {
             m_Player.GetComponent<DamageableObject>().Health = m_StartHealth;
         }
+    }
+
+
+    public override void Randomize()
+    {
+        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+        HealAmount = ManaCost / 5.0f;
     }
 }

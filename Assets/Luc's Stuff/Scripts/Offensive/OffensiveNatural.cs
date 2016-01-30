@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OffensiveNatural : MonoBehaviour {
+public class OffensiveNatural : Spell {
 
     GameObject player;
     public float Damage;
@@ -45,5 +45,12 @@ public class OffensiveNatural : MonoBehaviour {
         yield return new WaitForSeconds(1.0f);
 
         StartCoroutine(Pulse());
+    }
+
+
+    public override void Randomize() 
+    {
+        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+        Damage = ManaCost * 5;
     }
 }

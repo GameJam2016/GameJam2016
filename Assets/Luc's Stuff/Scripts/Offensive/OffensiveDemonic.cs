@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OffensiveDemonic : MonoBehaviour
+public class OffensiveDemonic : Spell
 {
 
     GameObject player;
@@ -13,8 +13,8 @@ public class OffensiveDemonic : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 
-     //   player = GameObject.FindGameObjectWithTag("Player");
-        player = this.gameObject;
+        player = GameObject.FindGameObjectWithTag("Player");
+        //  player = this.gameObject;
         if (player.transform.localScale.x < 0)
             direction = -1;
         else if (player.transform.localScale.x > 0)
@@ -35,9 +35,11 @@ public class OffensiveDemonic : MonoBehaviour
 
         
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+
+    public override void Randomize()
+    {
+        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+        Damage = ManaCost * 5;
+    }
 }

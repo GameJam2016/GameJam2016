@@ -12,8 +12,6 @@ public class Cards : MonoBehaviour
         Support,
         Defense
     }
-      
-    
 
 
     public float damage;
@@ -82,16 +80,29 @@ public class Cards : MonoBehaviour
         typeAtrributeInitialize();
     }
 
+    public GameObject CreateCard()
+    {
+        int typeOfCardRandomizer = Random.Range(0, 3);
+        int AttributeCardRandomizer = Random.Range(0, 3);
+        foreach (GameObject obj in spells)
+        {
+            Spell spell = obj.GetComponent<Spell>();
+            if((int)spell.Type == typeOfCardRandomizer)
+            {
+                if((int)spell.Attr == AttributeCardRandomizer)
+                {
+                    Debug.Log("Created : " + spell.Type + " - " + spell.Attr);
+                    return obj;
+                }
+            }
+        }
+        return null;
+    }
+
+
     //spells
-    public GameObject OffensiveHoly;
-    public GameObject OffensiveDenomic;
-    public GameObject OffensiveNatural;
-    public GameObject DefensiveHoly;
-    public GameObject DefensiveDenomic;
-    public GameObject DefensiveNatural;
-    public GameObject SupportHoly;
-    public GameObject SupportDenomic;
-    public GameObject SupportNatural;
+    public GameObject[] spells;
+
 
 
 }

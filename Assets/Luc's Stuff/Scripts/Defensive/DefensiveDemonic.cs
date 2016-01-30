@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DefensiveDemonic : MonoBehaviour
+public class DefensiveDemonic : Spell
 {
     public float HealAmount = 15.0f;
     public float InvisTime = 3.0f;
@@ -29,7 +29,11 @@ public class DefensiveDemonic : MonoBehaviour
         yield return new WaitForSeconds(InvisTime);
         render.enabled = true;
       //  sprite.enabled = true;
+    }
 
-
+    public override void Randomize()
+    {
+        ManaCost = Random.Range(0.0f, GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>().MaxMana);
+        HealAmount = ManaCost / 5.0f;
     }
 }
