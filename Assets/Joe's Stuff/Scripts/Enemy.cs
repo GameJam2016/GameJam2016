@@ -9,8 +9,8 @@ public enum attribute
 };
 
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : DamageableObject
+{ 
     [HideInInspector] public float health;
     [HideInInspector] public attribute myAttribute;
     [HideInInspector] public bool damaged, stunned;
