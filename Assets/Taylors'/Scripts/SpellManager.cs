@@ -19,7 +19,7 @@ public class SpellManager : MonoBehaviour
 
     public Image RevolverUI;
 
-    [SerializeField]private int CurrentRevolverSlot = 0;
+    public int CurrentRevolverSlot = 0;
 
 
     public Animator RevolverAnimator;
@@ -33,22 +33,16 @@ public class SpellManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-	    if(Input.GetKeyDown(KeyCode.A))
-        {
-            IncreaseSpellRevolverSize();
-        }
-
-        if(Input.GetKeyDown(KeyCode.B) && Invetory.activeInHierarchy == false)
-        {
-            Invetory.SetActive(true);
-            Invetory.GetComponent<InventoryHandler>().StartInventory();
-        }
+	    //if(Input.GetKeyDown(KeyCode.A))
+     //   {
+     //       IncreaseSpellRevolverSize();
+     //   }
 
         RotateAbilityRevolver();
 	}
 
     //Increases the amount of spells you can have available to you
-    void IncreaseSpellRevolverSize()
+    public void IncreaseSpellRevolverSize()
     {
         for (int i = 0; i < SpellSlots.Length; i++)
         {

@@ -13,12 +13,13 @@ public class PlayerFunctionality : MonoBehaviour
     public bool bHasJumped = false;
     public bool bIsAttacking = false;
     [SerializeField] float groundCheckRange = 1.0f;
-	
+    private SpellManager m_SpellManager;
 
     // Use this for initialization
     public void PlayerInitialize()
     {
         thisRigidBody = gameObject.GetComponent<Rigidbody2D>();
+        m_SpellManager = GameObject.Find("RevolverBackGround").GetComponent<SpellManager>();
     }
 
     //movement
@@ -61,33 +62,9 @@ public class PlayerFunctionality : MonoBehaviour
 
     public void CastSpell()
     {
-        if(!GetComponent<PlayerStatus>().MySpells[currentSpell])
+        if(m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot] != null)
         {
-            return;
-        }
-        Instantiate(GetComponent<PlayerStatus>().MySpells[currentSpell], transform.position, transform.rotation);
-
-    }
-
-    public void ChangeSpellRight()
-    {
-        currentSpell++;
-        if (currentSpell > 14 || !GetComponent<PlayerStatus>().MySpells[currentSpell])
-        {
-            currentSpell = 0;
-        }
-    }
-
-    public void ChangeSpellLeft()
-    {
-        currentSpell--;
-        if(currentSpell < 0)
-        {
-            currentSpell = 14;
-        }
-        while(!GetComponent<PlayerStatus>().MySpells[currentSpell])
-        {
-            currentSpell--;
+            Instantiate(m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot], transform.position, Quaternion.identity);
         }
     }
 

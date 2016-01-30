@@ -6,31 +6,31 @@ public class Shrine : MonoBehaviour
 {
     private bool FirstTime = true;
     public int numOfCardsToReward = 3;
-    public Image[] cards;
-
+    [SerializeField]
+    private GameObject m_Inventory;
+    [SerializeField]
+    private GameObject SpellManagerObject;
     void Start()
     {
-        cards = GameObject.Find("CardReward").GetComponentsInChildren<Image>();
-
-        foreach (Image im in cards)
-        {
-            im.enabled = false;
-        }
+        
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if(other.tag == "Player")
         {
             if(FirstTime)
             {
                 other.gameObject.GetComponent<PlayerStatus>().AddSpell(numOfCardsToReward);
+                SpellManagerObject.GetComponent<SpellManager>().IncreaseSpellRevolverSize();
                 FirstTime = false;
-                foreach (Image im in cards)
-                {
-                    im.enabled = true;
-                }
-
             }
+
+            if (InputManager.Instance.GetKeyDown("Parry") && m_Inventory.activeInHierarchy == false)
+            {
+                m_Inventory.SetActive(true);
+                m_Inventory.GetComponent<InventoryHandler>().StartInventory();
+            }
+
         }
     }
 }
