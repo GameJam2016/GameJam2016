@@ -7,6 +7,7 @@ public class PlayerInput : PlayerFunctionality
 	// Use this for initialization
 	void Start ()
     {
+        //initializing from playerFunctionality script
         PlayerInitialize();
 	}
 	
@@ -15,16 +16,37 @@ public class PlayerInput : PlayerFunctionality
     {
         bIsGrounded = Grounded();
 
-        if( InputManager.Instance.GetKey("Right") || Input.GetKeyDown("right"))
+        //moving right
+        if( InputManager.Instance.GetKey("Right") || Input.GetKey("right"))
         {
             MoveRight();
         }
 
-        else  if( InputManager.Instance.GetKey("Left") || Input.GetKeyDown("left"))
+        //moving left
+        else if ( InputManager.Instance.GetKey("Left") || Input.GetKey("left"))
         {
             MoveLeft();
         }
+        
+        //moving up
+        else if(InputManager.Instance.GetKey("Up") || Input.GetKey("up"))
+        {
+            MoveUp();
+        }
 
+        //moving down
+        else if(InputManager.Instance.GetKey("Down") || Input.GetKey("down"))
+        {
+            MoveDown();
+        }
+
+        //when none of the keys are pressed cancel the velocity to prevent sliding
+        else
+        {
+            MovementCancel();
+        }
+
+        //jumpng
         if(InputManager.Instance.GetKeyDown("Jump") || Input.GetKeyDown("space"))
         {
             Jump();
