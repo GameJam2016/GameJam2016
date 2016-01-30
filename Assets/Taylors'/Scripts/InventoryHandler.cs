@@ -39,6 +39,8 @@ public class InventoryHandler : MonoBehaviour
         for (int i = 0; i < InvetoryButtons.Length; i++)
         {
             //Change teh testSprite to an array that holds all the spells the player has in inventory
+            //actually if the players clicks on the spell in here just remove it from the spell bar and array
+            //and add it back to the inventory
             InvetoryButtons[i].GetComponent<Image>().sprite = testSprite;
         }
     }
