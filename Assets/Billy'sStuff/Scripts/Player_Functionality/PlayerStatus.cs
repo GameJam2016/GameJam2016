@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerStatus : MonoBehaviour
+public class PlayerStatus : DamageableObject
 {
 
     public attribute myAttribute;
