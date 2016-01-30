@@ -8,23 +8,24 @@ public class PlayerInput : PlayerFunctionality
 	void Start ()
     {
         PlayerInitialize();
-        bIsGrounded = Grounded();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKey("right"))
+        bIsGrounded = Grounded();
+
+        if( InputManager.Instance.GetKey("Right") || Input.GetKeyDown("right"))
         {
             MoveRight();
         }
 
-        else if(Input.GetKey("left"))
+        else  if( InputManager.Instance.GetKey("Left") || Input.GetKeyDown("left"))
         {
             MoveLeft();
         }
 
-        if(Input.GetKey("space"))
+        if(InputManager.Instance.GetKeyDown("Jump") || Input.GetKeyDown("space"))
         {
             Jump();
         }

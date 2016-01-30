@@ -9,6 +9,7 @@ public class PlayerFunctionality : MonoBehaviour
     public bool bIsGrounded;
     [SerializeField] float groundCheckRange = 0.5f;
 	
+
     // Use this for initialization
     public void PlayerInitialize()
     {
@@ -37,17 +38,20 @@ public class PlayerFunctionality : MonoBehaviour
     //grounded Check
     public bool Grounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, -Vector2.up, groundCheckRange, ~(1 << LayerMask.NameToLayer("Player")));
+       // RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, -Vector2.up, groundCheckRange, ~(1 << LayerMask.NameToLayer("Player")));
 
-        Debug.Log(hit.collider.name);
-        if(hit.collider.tag != "Player")
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        
+
+        return Physics2D.Raycast(gameObject.transform.position, -Vector2.up, groundCheckRange, ~(1 << LayerMask.NameToLayer("Player")));
+
+        //Debug.Log("name: " + hit.collider.name);
+        //if(hit.collider.tag != "Player")
+        //{
+        //    return true;
+        //}
+        //else
+        //{
+        //    return false;
+        //}
+
     }
 }
