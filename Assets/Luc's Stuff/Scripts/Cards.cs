@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Cards : MonoBehaviour {
+public class Cards : MonoBehaviour
+{
 
  //   public int damageMin, DamageMax;
     public int playerCurrentMaxMana = 200;
