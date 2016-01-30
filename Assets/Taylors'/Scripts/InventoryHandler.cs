@@ -35,6 +35,13 @@ public class InventoryHandler : MonoBehaviour
     void Update()
     {
         CancelSelectedSpell();
+
+        if(InputManager.Instance.GetKeyDown("ExitInventory"))
+        {
+            SpellManagerObject.GetComponent<SpellManager>().InventoryOpen = false;
+            FinalizeCustomizationOfSpells();
+        }
+
     }
 
     public void StartInventory()

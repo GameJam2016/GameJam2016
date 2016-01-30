@@ -25,10 +25,11 @@ public class Shrine : MonoBehaviour
                 FirstTime = false;
             }
 
-            if (InputManager.Instance.GetKeyDown("Parry") && m_Inventory.activeInHierarchy == false)
+            if (InputManager.Instance.GetKey("OpenInventory") && m_Inventory.activeInHierarchy == false)
             {
                 m_Inventory.SetActive(true);
                 m_Inventory.GetComponent<InventoryHandler>().StartInventory();
+                SpellManagerObject.GetComponent<SpellManager>().InventoryOpen = true;
             }
 
         }

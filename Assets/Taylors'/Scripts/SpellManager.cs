@@ -12,7 +12,7 @@ public class SpellManager : MonoBehaviour
     public int[] SpellSlots = {1, 0, 0, 0, 0, 0};
     public Image[] SpellWheelImageArray;
     public GameObject[] Spells;
-
+    public bool InventoryOpen = false;
     public GameObject Invetory;
 
     [SerializeField]private bool canChangeSpell = true;

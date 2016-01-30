@@ -1617,7 +1617,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11460246, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
       propertyPath: KeysToAdd.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 412336, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1675,6 +1675,38 @@ Prefab:
       propertyPath: KeysToAdd.Array.data[3].Code
       value: 331
       objectReference: {fileID: 0}
+    - target: {fileID: 11460246, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
+      propertyPath: KeysToAdd.Array.data[4].KeyName
+      value: Parry
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460246, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
+      propertyPath: KeysToAdd.Array.data[4].Code
+      value: 331
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460246, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
+      propertyPath: KeysToAdd.Array.data[5].KeyName
+      value: ExitInventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460246, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
+      propertyPath: KeysToAdd.Array.data[5].Code
+      value: 337
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460246, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
+      propertyPath: KeysToAdd.Array.data[6].KeyName
+      value: OpenInventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460246, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
+      propertyPath: KeysToAdd.Array.data[6].Code
+      value: 337
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460246, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
+      propertyPath: KeysToAdd.Array.data[7].KeyName
+      value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460246, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
+      propertyPath: KeysToAdd.Array.data[7].Code
+      value: 330
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76ef250dda6c0e44dabe43b1e701fbcd, type: 2}
   m_IsPrefabParent: 0
@@ -1709,7 +1741,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -283, y: -244}
+  m_AnchoredPosition: {x: -777, y: -313}
   m_SizeDelta: {x: 250, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1109684501
@@ -1723,7 +1755,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_Color: {r: 0, g: 0.006896496, b: 1, a: 0.722}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -1731,7 +1763,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1851,7 +1883,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -283, y: -222}
+  m_AnchoredPosition: {x: -777, y: -291}
   m_SizeDelta: {x: 250, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188398559
@@ -1873,7 +1905,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2706,6 +2738,7 @@ MonoBehaviour:
   - {fileID: 293772871}
   - {fileID: 714181374}
   Spells: []
+  InventoryOpen: 0
   Invetory: {fileID: 1069287683}
   canChangeSpell: 1
   RevolverUI: {fileID: 1618112393}
@@ -2841,11 +2874,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22426404, guid: e0592b54406a138409bf4deb55db662d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 187
+      value: 834
       objectReference: {fileID: 0}
     - target: {fileID: 22426404, guid: e0592b54406a138409bf4deb55db662d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -211
+      value: -263
       objectReference: {fileID: 0}
     - target: {fileID: 22426404, guid: e0592b54406a138409bf4deb55db662d, type: 2}
       propertyPath: m_SizeDelta.x
@@ -3106,6 +3139,7 @@ GameObject:
   - 58: {fileID: 1834264716}
   - 95: {fileID: 1834264715}
   - 114: {fileID: 1834264714}
+  - 114: {fileID: 1834264718}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -3204,6 +3238,20 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1834264718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1834264712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ab39c47ab2955428922b2d15357de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mana: {fileID: 1109684501}
+  Health: {fileID: 1188398559}
+  Player: {fileID: 0}
 --- !u!1 &1899109322
 GameObject:
   m_ObjectHideFlags: 0
