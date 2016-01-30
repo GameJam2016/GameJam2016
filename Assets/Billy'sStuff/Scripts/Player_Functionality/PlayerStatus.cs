@@ -5,6 +5,7 @@ public class PlayerStatus : DamageableObject
 {
     public float Mana = 0;
     public float MaxMana = 50;
+    public bool bIsInvisible = false;
     public GameObject[] MySpells = new GameObject[15];
     public Animator myAnimator;
 
@@ -22,7 +23,7 @@ public class PlayerStatus : DamageableObject
 
     public void AddSpell(int num)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < num; j++)
         {
             for (int i = 0; i < MySpells.Length; i++)
             {

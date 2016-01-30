@@ -24,9 +24,6 @@ public class OffensiveNatural : Spell {
 	// Update is called once per frame
 	void Update () {
         this.transform.position = player.transform.position;
-            
-        
-        
 
 	}
 
