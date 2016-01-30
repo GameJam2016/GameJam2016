@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 21cc7ad1171f93c4b84dfd6ebc68af5e
 folderAsset: yes
 timeCreated: 1454120470
@@ -9,6 +10,12 @@ folderAsset: yes
 timeCreated: 1454124656
 >>>>>>> 9aed8de77bf827b497a5bae2b10f15b84c5a10a9
 licenseType: Pro
+=======
+guid: bebcadd5fa49527428eeee86d479abad
+folderAsset: yes
+timeCreated: 1454143457
+licenseType: Free
+>>>>>>> origin/Taylor'sBranch
 DefaultImporter:
   userData: 
   assetBundleName: 

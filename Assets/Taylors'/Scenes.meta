@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 1463a573cfe63804c9d2aebe3ebb3895
 folderAsset: yes
 timeCreated: 1454127200
 licenseType: Pro
+=======
+guid: 516ee735d9641254db0fa11fc1709aed
+folderAsset: yes
+timeCreated: 1454143457
+licenseType: Free
+>>>>>>> origin/Taylor'sBranch
 DefaultImporter:
   userData: 
   assetBundleName: 
