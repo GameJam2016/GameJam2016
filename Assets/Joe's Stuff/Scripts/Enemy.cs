@@ -11,7 +11,7 @@ public enum attribute
 
 public class Enemy : DamageableObject
 {
-    private Rigidbody2D myRigid;
+    protected Rigidbody2D myRigid;
 
     [HideInInspector] public attribute myAttribute;
     // Status effects.
