@@ -31,7 +31,7 @@ GameObject:
   - 95: {fileID: 9510876}
   - 114: {fileID: 11411420}
   m_Layer: 0
-  m_Name: Golem
+  m_Name: Holy Golem
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   bIsDamaged: 0
   DamageCooldown: 1
   myRigid: {fileID: 0}
+  player: {fileID: 0}
   damaged: 0
   stunned: 0
   crowdControlled: 0
@@ -168,6 +169,9 @@ MonoBehaviour:
   crowdTime: 6
   pushPullScalar: 100
   slowScalar: 100
+  alerted: 0
+  moving: 0
+  attacking: 0
   attackCollider: {fileID: 136536}
   patrolLeft: 0
 --- !u!212 &21220854

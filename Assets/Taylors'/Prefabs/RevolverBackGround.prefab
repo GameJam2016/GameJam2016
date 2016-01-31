@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba4af9c821308f4896f832cc272c39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellSlots: 010000000000000000000000000000000000000000000000
+  SpellSlots: 010000000100000001000000010000000100000001000000
   SpellWheelImageArray:
   - {fileID: 11438864}
   - {fileID: 11443064}

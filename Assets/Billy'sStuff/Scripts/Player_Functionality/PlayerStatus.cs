@@ -20,9 +20,14 @@ public class PlayerStatus : DamageableObject
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) 
+       
+    }
+
+    void OnTriggerEnter2D(Collider2D CollisionEnter)
+    {
+        if(CollisionEnter.gameObject.tag == "Kill")
         {
-            Health -= 10.0f;
+            Health -= 100.0f;
         }
     }
 
