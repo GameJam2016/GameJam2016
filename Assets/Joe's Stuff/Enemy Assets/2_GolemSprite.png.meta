@@ -1,0 +1,334 @@
+fileFormatVersion: 2
+guid: 4dc708fbe1f75394aabd5256f0e59a38
+timeCreated: 1454209951
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 2_GolemSprite_0
+    21300002: 2_GolemSprite_1
+    21300004: 2_GolemSprite_2
+    21300006: 2_GolemSprite_3
+    21300008: 2_GolemSprite_4
+    21300010: 2_GolemSprite_5
+    21300012: 2_GolemSprite_6
+    21300014: 2_GolemSprite_7
+    21300016: 2_GolemSprite_8
+    21300018: 2_GolemSprite_9
+    21300020: 2_GolemSprite_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 2_GolemSprite_0
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 329
+        width: 107
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 43.5}
+        - {x: -53.5, y: 21.5}
+        - {x: -53.5, y: -43.5}
+        - {x: 53.5, y: -43.5}
+        - {x: 53.5, y: 26.5}
+        - {x: 21.5, y: 43.5}
+    - name: 2_GolemSprite_1
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 329
+        width: 107
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.5, y: 44}
+        - {x: -53.5, y: 41}
+        - {x: -53.5, y: -44}
+        - {x: 53.5, y: -44}
+        - {x: 53.5, y: 16}
+        - {x: 32.5, y: 44}
+    - name: 2_GolemSprite_2
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 221
+        width: 107
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53.5, y: 43.5}
+        - {x: -53.5, y: -43.5}
+        - {x: -20.5, y: -43.5}
+        - {x: -16.5, y: -40.5}
+        - {x: -16.5, y: -37.5}
+        - {x: -19.5, y: -36.5}
+        - {x: -19.5, y: -29.5}
+        - {x: -18.5, y: -31.5}
+        - {x: -16.5, y: -37.5}
+        - {x: -14.5, y: -42.5}
+        - {x: -12.5, y: -43.5}
+        - {x: 53.5, y: -43.5}
+        - {x: 53.5, y: 33.5}
+        - {x: 28.5, y: 43.5}
+    - name: 2_GolemSprite_3
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 221
+        width: 108
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: -30}
+        - {x: 12, y: -43}
+        - {x: 14, y: -44}
+        - {x: 25, y: -44}
+        - {x: 24, y: -41}
+        - {x: 21, y: -41}
+        - {x: 29, y: -41}
+        - {x: 36, y: -44}
+        - {x: 54, y: -44}
+        - {x: 54, y: -2}
+        - {x: 18, y: 44}
+        - {x: -54, y: 44}
+        - {x: -54, y: -40}
+        - {x: -52, y: -44}
+        - {x: 10, y: -44}
+        - {x: 12, y: -41}
+        - {x: 12, y: -33}
+        - {x: 9, y: -29}
+    - name: 2_GolemSprite_4
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 221
+        width: 105
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52.5, y: -43.5}
+        - {x: 52.5, y: 15.5}
+        - {x: 21.5, y: 43.5}
+        - {x: -47.5, y: 43.5}
+        - {x: -52.5, y: 41.5}
+        - {x: -52.5, y: -39.5}
+        - {x: -47.5, y: -43.5}
+        - {x: 7.5, y: -43.5}
+        - {x: 10.5, y: -41.5}
+        - {x: 7.5, y: -26.5}
+        - {x: 15.5, y: -43.5}
+    - name: 2_GolemSprite_5
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 221
+        width: 104
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: -43.5}
+        - {x: 52, y: 15.5}
+        - {x: 35, y: 43.5}
+        - {x: -52, y: 43.5}
+        - {x: -52, y: -43.5}
+        - {x: 13, y: -43.5}
+        - {x: 12, y: -30.5}
+        - {x: 12, y: -35.5}
+        - {x: 16, y: -43.5}
+    - name: 2_GolemSprite_6
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 42
+        width: 122
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: -42}
+        - {x: -4, y: -44}
+        - {x: 0, y: -44}
+        - {x: 1, y: -43}
+        - {x: 0, y: -40}
+        - {x: -3, y: -40}
+      - - {x: -61, y: 44}
+        - {x: -61, y: 0}
+        - {x: -59, y: -5}
+        - {x: -39, y: -11}
+        - {x: -43, y: -32}
+        - {x: -43, y: -43}
+        - {x: -29, y: -44}
+        - {x: -8, y: -44}
+        - {x: -3, y: -39}
+        - {x: 5, y: -44}
+        - {x: 54, y: -44}
+        - {x: 61, y: -36}
+        - {x: 61, y: 27}
+        - {x: 43, y: 44}
+      - - {x: -54, y: -38}
+        - {x: -56, y: -40}
+        - {x: -56, y: -42}
+        - {x: -54, y: -44}
+        - {x: -51, y: -44}
+        - {x: -50, y: -42}
+        - {x: -50, y: -40}
+        - {x: -53, y: -38}
+      - - {x: -48, y: -43}
+        - {x: -45, y: -42}
+        - {x: -45, y: -39}
+        - {x: -48, y: -38}
+        - {x: -50, y: -40}
+      - - {x: -40, y: -16}
+        - {x: -38, y: -18}
+        - {x: -35, y: -17}
+        - {x: -35, y: -14}
+        - {x: -37, y: -12}
+        - {x: -40, y: -13}
+    - name: 2_GolemSprite_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 33
+        width: 128
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -33.5}
+        - {x: 27, y: -39.5}
+        - {x: 37, y: -44.5}
+        - {x: 64, y: -38.5}
+        - {x: 64, y: 21.5}
+        - {x: 28, y: 43.5}
+        - {x: 26, y: 41.5}
+        - {x: 20, y: 36.5}
+        - {x: 20, y: 34.5}
+        - {x: 21, y: 39.5}
+        - {x: 20, y: 43.5}
+        - {x: 19, y: 46.5}
+        - {x: -24, y: 46.5}
+        - {x: -64, y: -6.5}
+        - {x: -64, y: -40.5}
+        - {x: -61, y: -42.5}
+        - {x: -37, y: -46.5}
+        - {x: 2, y: -46.5}
+        - {x: 13, y: -41.5}
+        - {x: 24, y: -29.5}
+        - {x: 25, y: -26.5}
+    - name: 2_GolemSprite_8
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 42
+        width: 96
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 67}
+        - {x: -45, y: 65}
+        - {x: -48, y: 55}
+        - {x: -48, y: -51}
+        - {x: -44, y: -67}
+        - {x: 48, y: -67}
+        - {x: 48, y: 38}
+        - {x: 38, y: 67}
+    - name: 2_GolemSprite_9
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 42
+        width: 88
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: 76}
+        - {x: -44, y: -76}
+        - {x: 44, y: -76}
+        - {x: 44, y: 76}
+    - name: 2_GolemSprite_10
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 42
+        width: 90
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: 76.5}
+        - {x: -19, y: 76.5}
+        - {x: -24, y: 75.5}
+        - {x: -45, y: 33.5}
+        - {x: -45, y: -45.5}
+        - {x: -42, y: -76.5}
+        - {x: 45, y: -76.5}
+        - {x: 45, y: -6.5}
+        - {x: 43, y: -6.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
