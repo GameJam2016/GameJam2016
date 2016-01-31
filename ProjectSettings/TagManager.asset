@@ -10,6 +10,9 @@ TagManager:
   - Spell
   - Ladder
   - SpellManagaer
+  - Tutorial
+  - Level1
+  - Level2
   layers:
   - Default
   - TransparentFX
@@ -44,6 +47,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 301106391
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ForeGround
+    uniqueID: 53437903
     locked: 0

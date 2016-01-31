@@ -41,7 +41,7 @@ public class Cards : MonoBehaviour
     void typeAtrributeInitialize()
     {
         int typeOfCardRandomizer = Random.Range(0, 2);
-        int AttributeCardRandomizer = Random.Range(0, 2);
+        int AttributeCardRandomizer =  Random.Range(0, 2);
        
         switch (typeOfCardRandomizer)
         {
