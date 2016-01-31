@@ -353,6 +353,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007e282fcf2d324428e030a07a049a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &772461934
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.705895
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.950724
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 29.203125
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &811094503
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +658,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1341845604
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +761,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11458604, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
       propertyPath: spells.Array.size
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 435724, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -761,6 +803,14 @@ Prefab:
       propertyPath: spells.Array.data[6]
       value: 
       objectReference: {fileID: 163654, guid: 1ec7b4eb923051c458cc05e9463856de, type: 2}
+    - target: {fileID: 11458604, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
+      propertyPath: spells.Array.data[7]
+      value: 
+      objectReference: {fileID: 104400, guid: 60743f0d7327c5c4dad12ec2d5972f8c, type: 2}
+    - target: {fileID: 11458604, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
+      propertyPath: spells.Array.data[8]
+      value: 
+      objectReference: {fileID: 141854, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
   m_IsPrefabParent: 0
@@ -877,3 +927,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   myAnimator: {fileID: 0}
+  TotalShinesVisited: 0
+  LastShrineVisited: {fileID: 0}

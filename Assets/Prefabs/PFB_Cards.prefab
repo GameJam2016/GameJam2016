@@ -1,14 +1,14 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &195214
+--- !u!1 &112912
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 435724}
-  - 114: {fileID: 11458604}
+  - 4: {fileID: 463492}
+  - 114: {fileID: 11409592}
   m_Layer: 0
   m_Name: PFB_Cards
   m_TagString: Cards
@@ -16,24 +16,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &435724
+--- !u!4 &463492
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195214}
+  m_GameObject: {fileID: 112912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11458604
+--- !u!114 &11409592
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195214}
+  m_GameObject: {fileID: 112912}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9bb6894a0efa2744a892b48a489770f, type: 3}
@@ -54,6 +54,9 @@ MonoBehaviour:
   - {fileID: 167146, guid: c41a44f8bd62b4342b96ed08f2f2b2f4, type: 2}
   - {fileID: 124572, guid: 2abf2e6556db8294a807c1cdfd3e1d3b, type: 2}
   - {fileID: 189876, guid: b067fb5bb972e8341b2431ade816b588, type: 2}
+  - {fileID: 163654, guid: 1ec7b4eb923051c458cc05e9463856de, type: 2}
+  - {fileID: 104400, guid: 60743f0d7327c5c4dad12ec2d5972f8c, type: 2}
+  - {fileID: 141854, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -63,5 +66,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 195214}
+  m_RootGameObject: {fileID: 112912}
   m_IsPrefabParent: 1
