@@ -35,7 +35,7 @@ public class EyeCrawlerProjectile : MonoBehaviour
         damage = inputDamage;
         myAttribute = inputAttribute;
 
-        Vector2 launch = new Vector2(- (player.transform.position.x - this.transform.position.x), player.transform.position.y - this.transform.position.y).normalized * inputSpeed;
+        Vector2 launch = new Vector2((player.transform.position.x - this.transform.position.x), player.transform.position.y - this.transform.position.y).normalized * inputSpeed;
         myRigid.velocity = launch;
     }
 
