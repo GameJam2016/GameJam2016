@@ -26,7 +26,7 @@ public class InventoryHandler : MonoBehaviour
 
         StartInventory();
 
-        LoadSpellsFromInvetory();
+        //LoadSpellsFromInvetory();
         //AvailableSpellSlots();
         
         EventSystem.current.SetSelectedGameObject(InvetoryButtons[0]);
@@ -35,24 +35,21 @@ public class InventoryHandler : MonoBehaviour
     void Update()
     {
         CancelSelectedSpell();
-
-        if(InputManager.Instance.GetKeyDown("ExitInventory"))
+        if (InputManager.Instance.GetKeyDown("ExitInventory"))
         {
-            SpellManagerObject.GetComponent<SpellManager>().InventoryOpen = false;
             FinalizeCustomizationOfSpells();
         }
-
     }
 
     public void StartInventory()
     {
-        
+        LoadSpellsFromInvetory();
         for (int i = 0; i < InvetoryButtons.Length; i++)
         {
             if (Player.GetComponent<PlayerStatus>().MySpells[i])
             {
                 InvetoryButtons[i].GetComponent<Image>().sprite = Player.GetComponent<PlayerStatus>().MySpells[i].GetComponent<Spell>().SpellImage.sprite;
-               
+                InvetoryButtons[i].GetComponent<Button>().interactable = true;
             }
         }
         AvailableSpellSlots();
@@ -81,13 +78,13 @@ public class InventoryHandler : MonoBehaviour
 
    //use the cancell function to cancel out the currently selected with a new one
 
-   public void CancelSelectedSpell()
+    void CancelSelectedSpell()
     {
-        if(InputManager.Instance.GetKeyDown("CancelSelectedSpell") && SelectedSpell != null)
+        if(SelectedSpell && InputManager.Instance.GetKeyDown("CancelSelectedSpell") )
         {
             //Make the image go back to default instead of null
             
-            DesciptionText.text = "";
+            DesciptionText.text = " ";
             HoldLastVerionOfButton = SelectedSpell;
             InvetoryButtons[int.Parse(SelectedSpell.name)].GetComponent<Image>().color = new Color(255.0f, 255.0f, 255.0f, 255.0f);
             SelectedSpell = null;
@@ -104,6 +101,7 @@ public class InventoryHandler : MonoBehaviour
             //actually if the players clicks on the spell in here just remove it from the spell bar and array
             //and add it back to the inventory
             InvetoryButtons[i].GetComponent<Image>().sprite = testSprite;
+            InvetoryButtons[i].GetComponent<Button>().interactable = false;
         }
     }
     //Lets the player to only put spells in slots that he/she has unlocked
@@ -125,14 +123,16 @@ public class InventoryHandler : MonoBehaviour
     //Sets the selected spells sprie, mana cost to the equipted slot
     public void SetSpellToEquipSlot()
     {
-        Debug.Log(EventSystem.current.currentSelectedGameObject.tag);
+        //Debug.Log(EventSystem.current.currentSelectedGameObject.tag);
         if(SelectedSpell && EventSystem.current.currentSelectedGameObject.tag == "SpellSlots")
         {
             EquiptedSpells[int.Parse(EventSystem.current.currentSelectedGameObject.name)].GetComponent<Image>().sprite = SelectedSpell.GetComponent<Image>().sprite;
-            for(int i = 0; i < InvetoryButtons.Length; i++)
+            
+            for (int i = 0; i < InvetoryButtons.Length; i++)
             {
                 if(SelectedSpell == InvetoryButtons[i])
                 {
+                    //SelectedSpell.GetComponent<Image>().sprite = 
                     SpellManagerObject.GetComponent<SpellManager>().Spells[int.Parse(EventSystem.current.currentSelectedGameObject.name)] = Player.GetComponent<PlayerStatus>().MySpells[i];
                 }
             }
@@ -141,10 +141,12 @@ public class InventoryHandler : MonoBehaviour
 
     public void FinalizeCustomizationOfSpells()
     {
+        Debug.Log("Booos[");
         for(int i = 0; i < EquiptedSpells.Length; i++)
         {
             SpellManagerObject.GetComponent<SpellManager>().SpellWheelImageArray[i].GetComponent<Image>().sprite = EquiptedSpells[i].GetComponent<Image>().sprite;
         }
         this.gameObject.SetActive(false);
+        SpellManagerObject.GetComponent<SpellManager>().InventoryOpen = false;
     }
 }

@@ -14,7 +14,7 @@ public class Enemy : DamageableObject
     public Rigidbody2D myRigid;
     public GameObject player;
     // Status effects.
-    [HideInInspector] public bool damaged, stunned, crowdControlled, attacked;
+   public bool damaged, stunned, crowdControlled, attacked;
     [HideInInspector] public GameObject leftBound, rightBound, spawner;
     // Initial speed, current speed, speed of attacks, the amount of time before you can be cc'd again, the scalar 
     // for cc forces, the scalar for slow cc.

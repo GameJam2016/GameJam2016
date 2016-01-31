@@ -23,13 +23,23 @@ public class ManaHealth : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void UpdateHealhMana()
+	void Update ()
     {
-        Mana.fillAmount = (Player.GetComponent<PlayerStatus>().Mana / Player.GetComponent<PlayerStatus>().Mana);
+        UpdateHealthMana();
+        CheckHealth();
+    }
+
+    void UpdateHealthMana()
+    {
+        Mana.fillAmount = (Player.GetComponent<PlayerStatus>().Mana / Player.GetComponent<PlayerStatus>().MaxMana);
         Health.fillAmount = (Player.GetComponent<PlayerStatus>().Health / 100);
+    }
+
+    void CheckHealth()
+    {
+        if(Player.GetComponent<PlayerStatus>().Health <= 0.0f)
+        {
+            Player.transform.position = Player.GetComponent<PlayerStatus>().LastShrineVisited.transform.position;
+        }
     }
 }

@@ -85,6 +85,80 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &6826330
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 476712, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.12834
+      objectReference: {fileID: 0}
+    - target: {fileID: 476712, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 476712, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 29.207401
+      objectReference: {fileID: 0}
+    - target: {fileID: 476712, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476712, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476712, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476712, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 476712, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 475754, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 475754, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -25.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 483018, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 22.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 483018, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: golem.spawn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: golem.spawnNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: golem.spawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: timeDelay
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &740164479
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +234,7 @@ Transform:
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &740164484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +353,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007e282fcf2d324428e030a07a049a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &772461934
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.705895
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.950724
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 29.203125
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 497660, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &811094503
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +471,7 @@ Transform:
   m_LocalScale: {x: 5000, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &936621975
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +543,9 @@ MonoBehaviour:
   stunned: 0
   crowdControlled: 0
   attacked: 0
+  leftBound: {fileID: 0}
+  rightBound: {fileID: 0}
+  spawner: {fileID: 0}
   damage: 0
   startSpeed: 0
   moveSpeed: 0
@@ -474,11 +593,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 936621975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.41, y: 0, z: 0}
+  m_LocalPosition: {x: 33.55, y: -1.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1050553653
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,62 +658,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
---- !u!1 &1255013312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 195214, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
-  m_PrefabInternal: {fileID: 1452201439}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1255013314}
-  - 114: {fileID: 1255013313}
-  m_Layer: 0
-  m_Name: PFB_Cards
-  m_TagString: Cards
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1255013313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11458604, guid: b2ed27db5a5b0034cb359ae74c07a5c0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1452201439}
-  m_GameObject: {fileID: 1255013312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9bb6894a0efa2744a892b48a489770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCurrentMaxMana: 200
-  damage: 0
-  manacost: 0
-  DefensivePower: 0
-  CCduration: 0
-  typeOfThisCard: 0
-  AttributeOfThisCard: 0
-  discription: 
-  spells:
-  - {fileID: 160186, guid: 0dbd856c5f92c1c43b2c531e5a766da3, type: 2}
-  - {fileID: 109274, guid: 41020b6a112051a4eae4d8bb28d2c6d8, type: 2}
-  - {fileID: 142072, guid: 229a8f541f434a74f960ee9d2d41833f, type: 2}
-  - {fileID: 167146, guid: c41a44f8bd62b4342b96ed08f2f2b2f4, type: 2}
-  - {fileID: 124572, guid: 2abf2e6556db8294a807c1cdfd3e1d3b, type: 2}
-  - {fileID: 189876, guid: b067fb5bb972e8341b2431ade816b588, type: 2}
---- !u!4 &1255013314
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 435724, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
-  m_PrefabInternal: {fileID: 1452201439}
-  m_GameObject: {fileID: 1255013312}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1341845604
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +670,7 @@ GameObject:
   - 33: {fileID: 1341845607}
   - 65: {fileID: 1341845606}
   - 23: {fileID: 1341845605}
+  - 114: {fileID: 1341845609}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -665,11 +730,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341845604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.57, y: 0.46, z: 0}
+  m_LocalPosition: {x: -21.8, y: 0.46, z: 0}
   m_LocalScale: {x: 1, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
+--- !u!114 &1341845609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1341845604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889066f282cd2f94f9e57a0fc3b0c714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaCost: 0
+  Description: 
+  Type: 0
+  Attr: 1
+  SpellImage: {fileID: 0}
+  Cooldown: 0
 --- !u!1001 &1452201439
 Prefab:
   m_ObjectHideFlags: 0
@@ -677,6 +759,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11458604, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
+      propertyPath: spells.Array.size
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 435724, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -713,9 +799,20 @@ Prefab:
       propertyPath: m_TagString
       value: Cards
       objectReference: {fileID: 0}
+    - target: {fileID: 11458604, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
+      propertyPath: spells.Array.data[6]
+      value: 
+      objectReference: {fileID: 163654, guid: 1ec7b4eb923051c458cc05e9463856de, type: 2}
+    - target: {fileID: 11458604, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
+      propertyPath: spells.Array.data[7]
+      value: 
+      objectReference: {fileID: 104400, guid: 60743f0d7327c5c4dad12ec2d5972f8c, type: 2}
+    - target: {fileID: 11458604, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
+      propertyPath: spells.Array.data[8]
+      value: 
+      objectReference: {fileID: 141854, guid: edca2b53cd917574a8c57d29a7eaf0bf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2ed27db5a5b0034cb359ae74c07a5c0, type: 2}
-  m_RootGameObject: {fileID: 1255013312}
   m_IsPrefabParent: 0
 --- !u!1 &1958946788
 GameObject:
@@ -789,11 +886,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1958946788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.54, y: 9.87, z: 0}
+  m_LocalPosition: {x: -18.91, y: -0.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &1958946793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,3 +927,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   myAnimator: {fileID: 0}
+  TotalShinesVisited: 0
+  LastShrineVisited: {fileID: 0}

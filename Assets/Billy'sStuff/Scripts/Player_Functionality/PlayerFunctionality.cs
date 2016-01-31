@@ -49,7 +49,7 @@ public class PlayerFunctionality : MonoBehaviour
     {
         thisRigidBody.velocity = new Vector2(0, thisRigidBody.velocity.y);
     }
-
+                               
     public void Jump()
     {
         if(bIsGrounded || bOnLadder)
@@ -64,7 +64,13 @@ public class PlayerFunctionality : MonoBehaviour
     {
         if(m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot] != null)
         {
-            Instantiate(m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot], transform.position, Quaternion.identity);
+            GameObject cardInstance = m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot];
+            GameObject Player = GameObject.FindGameObjectWithTag("Player");
+            if(Player.GetComponent<PlayerStatus>().Mana - cardInstance.GetComponent<Spell>().ManaCost > 0.0f)
+            {
+                Instantiate(m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot], transform.position, transform.rotation);
+                Player.GetComponent<PlayerStatus>().Mana -= cardInstance.GetComponent<Spell>().ManaCost;
+            }
         }
     }
 
