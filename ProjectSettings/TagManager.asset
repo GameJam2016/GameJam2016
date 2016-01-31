@@ -13,6 +13,7 @@ TagManager:
   - Tutorial
   - Level1
   - Level2
+  - ReturnToLevelSelect
   layers:
   - Default
   - TransparentFX
