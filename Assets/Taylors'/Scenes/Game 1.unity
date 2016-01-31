@@ -2038,11 +2038,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 458172, guid: 1783aaa512c66aa4b81dcfb3ef183982, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 351.67
+      value: 336.81
       objectReference: {fileID: 0}
     - target: {fileID: 458172, guid: 1783aaa512c66aa4b81dcfb3ef183982, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -300.41
+      value: -292.58
       objectReference: {fileID: 0}
     - target: {fileID: 458172, guid: 1783aaa512c66aa4b81dcfb3ef183982, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3280,7 +3280,7 @@ GameObject:
   - 61: {fileID: 657833565}
   m_Layer: 0
   m_Name: KillBox
-  m_TagString: Untagged
+  m_TagString: Kill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3294,7 +3294,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2

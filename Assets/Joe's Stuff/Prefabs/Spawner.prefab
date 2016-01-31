@@ -128,9 +128,9 @@ MonoBehaviour:
     spawnTime: 1
     spawnAttribute: 2
     enemyPrefab:
-    - {fileID: 0}
-    - {fileID: 0}
     - {fileID: 166250, guid: fcd5f658b32e0fe45b117c3c2098a4f1, type: 2}
+    - {fileID: 166250, guid: 6bf6484fde9ec2745885f2d49465e914, type: 2}
+    - {fileID: 166250, guid: 24923e2612c2af448ba953ae537fe910, type: 2}
   wisp:
     spawn: 0
     spawnNumber: 0
@@ -150,7 +150,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: golem.enemyPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 166250, guid: 6bf6484fde9ec2745885f2d49465e914, type: 2}
+    - target: {fileID: 0}
+      propertyPath: golem.enemyPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 166250, guid: fcd5f658b32e0fe45b117c3c2098a4f1, type: 2}
+    - target: {fileID: 0}
+      propertyPath: golem.enemyPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 166250, guid: 24923e2612c2af448ba953ae537fe910, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167738}
