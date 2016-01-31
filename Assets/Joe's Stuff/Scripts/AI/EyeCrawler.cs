@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EyeCrawler : Enemy
 {
-    private bool alerted, moving, fleeing;
+    public bool alerted, moving, fleeing;
     private Vector2 leftDirection, rightDirection;
 
     public GameObject projectile;
@@ -24,6 +24,7 @@ public class EyeCrawler : Enemy
         if (alerted && killTime())
         {
             attack();
+            this.GetComponent<EyecrawlerSpriteController>().attack();
             StartCoroutine(attackCooldown(attackSpeed));
         }
 
