@@ -42,7 +42,7 @@ public class EyeCrawler : Enemy
 
     bool killTime()
     {
-        if (!stunned && !attacked)
+        if (!stunned && !attacked && !invisiblePlayer())
         {
             return true;
         }

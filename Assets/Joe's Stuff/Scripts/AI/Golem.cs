@@ -74,7 +74,7 @@ public class Golem : Enemy
     bool alert ()
     {
         
-        if (leftBound.transform.position.x < player.transform.position.x && rightBound.transform.position.x > player.transform.position.x && this.transform.position.y + 5.0f >= player.transform.position.y)
+        if (leftBound.transform.position.x < player.transform.position.x && rightBound.transform.position.x > player.transform.position.x && this.transform.position.y + 5.0f >= player.transform.position.y && !invisiblePlayer())
         {
             return true;
         }
