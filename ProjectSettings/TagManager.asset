@@ -14,6 +14,7 @@ TagManager:
   - Level1
   - Level2
   - ReturnToLevelSelect
+  - Kill
   layers:
   - Default
   - TransparentFX
