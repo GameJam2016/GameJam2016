@@ -6,12 +6,16 @@ public class SupportNatural : Spell {
     public float Duration;
     public float Radius;
     public GameObject player;
+    public GameObject anim;
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
         this.transform.position = player.transform.position;
         Duration = 0;
         this.GetComponent<CircleCollider2D>().radius = Radius;
+        anim = (GameObject)Instantiate(anim, transform.position, transform.rotation);
+        anim.transform.parent = gameObject.transform;
+        
 	}
 	
 	// Update is called once per frame

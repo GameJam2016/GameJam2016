@@ -39,13 +39,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfe4f575416ee640bafbcfd0698c3af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 1.9410849
+  ManaCost: 19.69622
   Description: 
   Type: 2
   Attr: 2
-  SpellImage: {fileID: 11418402, guid: ec36211382e61064a9e5a81a940530e7, type: 2}
+  SpellImage: {fileID: 11498632, guid: c931dbe3164c80040b64c94be2605ce0, type: 2}
   Cooldown: 0
-  HealAmount: 0.38821697
+  HealAmount: 3.939244
   ShieldTime: 2
   ShieldAmount: 20
   m_anim: {fileID: 183302, guid: cb6fbe1b110f555448f5ab9e9d2546e2, type: 2}
@@ -67,7 +67,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: SpellImage
       value: 
-      objectReference: {fileID: 11418402, guid: ec36211382e61064a9e5a81a940530e7,
+      objectReference: {fileID: 11498632, guid: c931dbe3164c80040b64c94be2605ce0,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

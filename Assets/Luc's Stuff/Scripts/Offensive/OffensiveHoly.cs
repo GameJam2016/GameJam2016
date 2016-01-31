@@ -12,6 +12,7 @@ public class OffensiveHoly : Spell
     public GameObject enemy;
     public float direction;
     int beamNumber;
+    public GameObject anim;
 
 	// Use this for initialization
 	void Start () {
@@ -52,11 +53,17 @@ public class OffensiveHoly : Spell
     //        return;
         Debug.DrawLine(player.transform.position + new Vector3(position, 20 * direction, 0), hit.point, Color.red, 100);
         Debug.Log(hit.collider.tag);
-        if (hit.collider.gameObject.tag == "Enemy")
+        Instantiate(anim, hit.point + new Vector2(0, 3.5f), Quaternion.identity);
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(hit.point - new Vector2(1, 0), new Vector2(1, 2), 0, Vector3.right);
+        foreach(RaycastHit2D boxHit in hits)
         {
-      //      hit.collider.gameObject.GetComponent<Enemy>().Health -= Damage;
-            DamageManager.Instance.SendDamage(this.gameObject, hit.collider.gameObject.GetComponent<Enemy>(), attribute.Holy, Damage, false);
+            if (boxHit.collider.gameObject.tag == "Enemy")
+            {
+                //      hit.collider.gameObject.GetComponent<Enemy>().Health -= Damage;
+                DamageManager.Instance.SendDamage(this.gameObject, hit.collider.gameObject.GetComponent<Enemy>(), attribute.Holy, Damage, false);
+            }
         }
+
 
      }
 

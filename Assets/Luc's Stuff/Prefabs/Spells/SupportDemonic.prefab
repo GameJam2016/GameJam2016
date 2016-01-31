@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0dc799a3fcdc4991facf85eb49c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 43.395634
+  ManaCost: 28.473726
   Description: 
   Type: 1
   Attr: 1
@@ -117,7 +117,7 @@ MonoBehaviour:
   player: {fileID: 0}
   duration: 0
   BHole: 0
-  speed: 5
+  speed: 2
   BholeRadius: 5
 --- !u!1001 &100100000
 Prefab:
@@ -142,6 +142,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

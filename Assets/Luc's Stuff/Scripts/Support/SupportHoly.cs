@@ -5,14 +5,16 @@ public class SupportHoly : Spell {
 
     GameObject player;
     float duration;
+    public GameObject anim;
 	// Use this for initialization
 	void Start () {
         
         player = GameObject.FindGameObjectWithTag("Player");
         this.transform.position = player.transform.position;
+        anim = (GameObject)Instantiate(anim, transform.position + new Vector3(0, 3, 0), transform.rotation);
 
-        
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
