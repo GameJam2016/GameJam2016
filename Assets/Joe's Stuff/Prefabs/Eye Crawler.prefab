@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11487884}
   m_Layer: 0
   m_Name: Eye Crawler
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +116,9 @@ MonoBehaviour:
   stunned: 0
   crowdControlled: 0
   attacked: 0
+  leftBound: {fileID: 0}
+  rightBound: {fileID: 0}
+  spawner: {fileID: 0}
   damage: 10
   startSpeed: 5
   moveSpeed: 5
@@ -123,9 +126,6 @@ MonoBehaviour:
   crowdTime: 1
   pushPullScalar: 1
   slowScalar: 1
-  leftBound: {fileID: 0}
-  rightBound: {fileID: 0}
-  spawner: {fileID: 0}
   projectile: {fileID: 150746, guid: 66ee633ee0f15ac46b83ba740df105df, type: 2}
   patrolLeft: 0
   launchSpeed: 20
@@ -135,7 +135,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 158332}

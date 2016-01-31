@@ -15,15 +15,16 @@ public class Enemy : DamageableObject
     protected GameObject player;
     // Status effects.
     [HideInInspector] public bool damaged, stunned, crowdControlled, attacked;
-
+    [HideInInspector] public GameObject leftBound, rightBound, spawner;
     // Initial speed, current speed, speed of attacks, the amount of time before you can be cc'd again, the scalar 
     // for cc forces, the scalar for slow cc.
     public float damage, startSpeed, moveSpeed, attackSpeed, crowdTime, pushPullScalar, slowScalar;
 
+    
 	// Use this for initialization
 	void Start ()
     {
-        
+        crowdTime = 6.0f;
 	}
 	
 	// Update is called once per frame
@@ -32,8 +33,9 @@ public class Enemy : DamageableObject
 
 	}
 
-    public void crowdControl (GameObject source, int manaCost, attribute attackType)
+    public void crowdControl (GameObject source, float manaCost, attribute attackType)
     {
+
         // This will be used in Holy or Demonic crowd control.
         Vector2 toSource = source.transform.position - this.transform.position;
 
