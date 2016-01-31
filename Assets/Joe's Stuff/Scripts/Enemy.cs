@@ -15,15 +15,16 @@ public class Enemy : DamageableObject
     protected GameObject player;
     // Status effects.
     [HideInInspector] public bool damaged, stunned, crowdControlled, attacked;
-
+    [HideInInspector] public GameObject leftBound, rightBound, spawner;
     // Initial speed, current speed, speed of attacks, the amount of time before you can be cc'd again, the scalar 
     // for cc forces, the scalar for slow cc.
     public float damage, startSpeed, moveSpeed, attackSpeed, crowdTime, pushPullScalar, slowScalar;
 
+    
 	// Use this for initialization
 	void Start ()
     {
-        
+        crowdTime = 6.0f;
 	}
 	
 	// Update is called once per frame
@@ -32,8 +33,9 @@ public class Enemy : DamageableObject
 
 	}
 
-    public void crowdControl (GameObject source, int manaCost, attribute attackType)
+    public void crowdControl (GameObject source, float manaCost, attribute attackType)
     {
+
         // This will be used in Holy or Demonic crowd control.
         Vector2 toSource = source.transform.position - this.transform.position;
 
@@ -61,7 +63,7 @@ public class Enemy : DamageableObject
         }
 
         // If we're already crowd controlled, or we're outside it's range of influence, never mind.
-        if (crowdControlled || toSource.magnitude > manaCost)
+        if (crowdControlled)
         {
                 
         }
@@ -94,7 +96,7 @@ public class Enemy : DamageableObject
             myRigid.AddForce(toSource);
 
             // We start our crowd control cooldown.
-            StartCoroutine(crowdControlling(crowdTime));
+            StartCoroutine(crowdControlling(source));
         }
 
         // If it's Demonic crowd control
@@ -125,7 +127,7 @@ public class Enemy : DamageableObject
             myRigid.AddForce(toSource);
 
             // We start our crowd control cooldown.
-            StartCoroutine(crowdControlling(crowdTime));
+            StartCoroutine(crowdControlling(source));
         }
 
         // If it's Natural crowd control
@@ -150,10 +152,10 @@ public class Enemy : DamageableObject
             }
             
             // We start our crowd control cooldown.
-            StartCoroutine(crowdControlling(crowdTime));
+            StartCoroutine(crowdControlling(source));
 
             // We start our slow timer
-            StartCoroutine(slow(crowdTime, manaCost * slowScalar));
+            StartCoroutine(slow(manaCost * slowScalar, source));
         }
     }
 
@@ -163,32 +165,28 @@ public class Enemy : DamageableObject
     }
 
     // How long we are crowd controlled.
-    IEnumerator crowdControlling(float timeLimit)
+    IEnumerator crowdControlling(GameObject source)
     {
-        float timePassed = 0;
         stunned = true;
         crowdControlled = true;
         do
         {
-            timePassed += Time.deltaTime;
             yield return null;
-        } while (timePassed <= timeLimit);
+        } while (source != null);
         crowdControlled = false;
         stunned = false;
     }
 
     // How long we are slowed.
-    IEnumerator slow(float timeLimit, float theSlow)
+    IEnumerator slow(float theSlow, GameObject source)
     {
-        float timePassed = 0;
         moveSpeed = moveSpeed / theSlow;
         stunned = true;
         do
         {
-            timePassed += Time.deltaTime;
             yield return null;
-        } while (timePassed <= timeLimit);
-        moveSpeed = moveSpeed * theSlow;
+        } while (source != null);
+        moveSpeed = startSpeed;
         stunned = false;
     }
 
