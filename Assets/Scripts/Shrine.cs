@@ -15,15 +15,19 @@ public class Shrine : MonoBehaviour
     {
         
     }
+
+    void Update()
+    {
+    }
     void OnTriggerStay2D(Collider2D other)
     {
         if(other.tag == "Player")
         {
-            if(FirstTime)
+            if (FirstTime)
             {
+                FirstTime = false;
                 other.gameObject.GetComponent<PlayerStatus>().AddSpell(numOfCardsToReward);
                 SpellManagerObject.GetComponent<SpellManager>().IncreaseSpellRevolverSize();
-                FirstTime = false;
                 other.GetComponent<PlayerStatus>().TotalShinesVisited += 1;
             }
 

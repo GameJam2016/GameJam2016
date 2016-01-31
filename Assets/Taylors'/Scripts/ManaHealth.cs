@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ManaHealth : MonoBehaviour
 {
     public Image Mana, Health;
-    public GameObject Player;
+    public PlayerStatus Player;
 	// Use this for initialization
 	void Start ()
     {
@@ -19,7 +19,7 @@ public class ManaHealth : MonoBehaviour
         Mana.fillOrigin = (int)Image.OriginHorizontal.Left;
         Mana.fillAmount = 1;
 
-        Player = GameObject.FindGameObjectWithTag("Player");
+        //Player = GameObject.FindGameObjectWithTag("Player");
     }
 	
 	// Update is called once per frame
@@ -31,15 +31,15 @@ public class ManaHealth : MonoBehaviour
 
     void UpdateHealthMana()
     {
-        Mana.fillAmount = (Player.GetComponent<PlayerStatus>().Mana / Player.GetComponent<PlayerStatus>().MaxMana);
-        Health.fillAmount = (Player.GetComponent<PlayerStatus>().Health / 100);
+        Mana.fillAmount = (Player.Mana / Player.MaxMana);
+        Health.fillAmount = (Player.Health / 100);
     }
 
     void CheckHealth()
     {
-        if(Player.GetComponent<PlayerStatus>().Health <= 0.0f)
+        if(Player.Health <= 0.0f)
         {
-            Player.transform.position = Player.GetComponent<PlayerStatus>().LastShrineVisited.transform.position;
+            Player.transform.position = Player.LastShrineVisited.transform.position;
         }
     }
 }

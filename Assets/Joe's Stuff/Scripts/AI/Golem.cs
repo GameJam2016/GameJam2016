@@ -21,6 +21,7 @@ public class Golem : Enemy
 	void Update () 
     {
 
+        CheckHealth();
         alerted = alert();
 
         // We attacked, so no other actions.

@@ -30,9 +30,15 @@ public class Enemy : DamageableObject
 	// Update is called once per frame
 	void Update ()
     {
-
 	}
 
+    protected void CheckHealth()
+    {
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     public void crowdControl (GameObject source, float manaCost, attribute attackType)
     {
 
