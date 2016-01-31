@@ -173,7 +173,7 @@ public class Golem : Enemy
 
             if (this.transform.position.x < leftBound.transform.position.x)
             {
-                this.transform.position = rightBound.transform.position;
+                this.transform.position = leftBound.transform.position;
             }
 
             // If we're not going faster than our moveSpeed, add some force to fix that.

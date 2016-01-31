@@ -31,7 +31,7 @@ GameObject:
   - 95: {fileID: 9510876}
   - 114: {fileID: 11411420}
   m_Layer: 0
-  m_Name: Natural Golem 1
+  m_Name: Demonic Golem
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
