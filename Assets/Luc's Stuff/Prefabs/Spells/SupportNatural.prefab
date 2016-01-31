@@ -8,8 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497660}
-  - 33: {fileID: 3346592}
-  - 23: {fileID: 2327688}
   - 58: {fileID: 5844066}
   - 114: {fileID: 11498544}
   m_Layer: 0
@@ -26,44 +24,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.705895, y: 2.950724, z: 29.203125}
+  m_LocalPosition: {x: 0.0350132, y: 6.0892835, z: 29.203125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2327688
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141854}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &3346592
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141854}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!58 &5844066
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -89,15 +54,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e553b9670069034fa27bdc4cd9333bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 41.449898
+  ManaCost: 8.316952
   Description: 
   Type: 1
   Attr: 2
   SpellImage: {fileID: 11468040, guid: 2b56ec0ab4bbdf34ea0318a1d2fc1b80, type: 2}
-  Cooldown: 0
-  Duration: 0
+  Cooldown: 1
+  Duration: 1
   Radius: 5
   player: {fileID: 0}
+  anim: {fileID: 188460, guid: dcf6f4b816d298e46a99d3618690edf5, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -113,6 +79,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: Radius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 188460, guid: dcf6f4b816d298e46a99d3618690edf5, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Duration
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

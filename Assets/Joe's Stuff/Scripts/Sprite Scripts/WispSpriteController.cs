@@ -12,7 +12,7 @@ public class WispSpriteController : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        attack.GetComponent<SpriteRenderer>().enabled = false;
+        attack.GetComponentInChildren<SpriteRenderer>().enabled = false;
 	}
 	
 	// Update is called once per frame

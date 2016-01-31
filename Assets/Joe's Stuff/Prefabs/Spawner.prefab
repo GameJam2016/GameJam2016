@@ -28,7 +28,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -114,36 +114,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyeCrawler:
-    spawn: 0
+    spawn: 1
     spawnNumber: 1
     spawnTime: 1
-    spawnAttribute: 1
+    spawnAttribute: 2
     enemyPrefab:
-    - {fileID: 0}
+    - {fileID: 158332, guid: 524b660320a15e249b2f7261365de38a, type: 2}
     - {fileID: 158332, guid: 2cbfa22efcc7a534f829cda3232be98a, type: 2}
-    - {fileID: 0}
+    - {fileID: 158332, guid: 61a2d61824e47104bb388c417129e302, type: 2}
   golem:
+    spawn: 0
+    spawnNumber: 5
+    spawnTime: 1
+    spawnAttribute: 2
+    enemyPrefab:
+    - {fileID: 166250, guid: ec39e1e38d8de004da855f1f7c069505, type: 2}
+    - {fileID: 166250, guid: 603896637d57e4549842651fd280e8b1, type: 2}
+    - {fileID: 166250, guid: 24923e2612c2af448ba953ae537fe910, type: 2}
+  wisp:
     spawn: 0
     spawnNumber: 1
     spawnTime: 1
     spawnAttribute: 2
     enemyPrefab:
-    - {fileID: 166250, guid: fcd5f658b32e0fe45b117c3c2098a4f1, type: 2}
-    - {fileID: 166250, guid: 6bf6484fde9ec2745885f2d49465e914, type: 2}
-    - {fileID: 166250, guid: 24923e2612c2af448ba953ae537fe910, type: 2}
-  wisp:
-    spawn: 0
-    spawnNumber: 0
-    spawnTime: 0
-    spawnAttribute: 0
-    enemyPrefab:
     - {fileID: 153240, guid: ae7a099a8bfaf3d4795a5cf7e031ce4b, type: 2}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 107336, guid: e277870b4af00dc4391ecceff8e08ace, type: 2}
+    - {fileID: 107336, guid: 911328e06b41e01499ce6feeb736cd30, type: 2}
   leftBound: {fileID: 152786}
   rightBound: {fileID: 186894}
   range: 5
-  timeDelay: 0
+  timeDelay: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

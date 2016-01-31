@@ -11,9 +11,9 @@ GameObject:
   - 33: {fileID: 3368958}
   - 23: {fileID: 2351498}
   - 114: {fileID: 11473892}
-  - 58: {fileID: 5818954}
   - 50: {fileID: 5010416}
-  m_Layer: 0
+  - 58: {fileID: 5802416}
+  m_Layer: 8
   m_Name: SupportDemonic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104400}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!50 &5010416
 Rigidbody2D:
   serializedVersion: 2
@@ -82,7 +82,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &5818954
+--- !u!58 &5802416
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -95,7 +95,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!114 &11473892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0dc799a3fcdc4991facf85eb49c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 43.395634
+  ManaCost: 8.905053
   Description: 
   Type: 1
   Attr: 1
@@ -117,7 +117,7 @@ MonoBehaviour:
   player: {fileID: 0}
   duration: 0
   BHole: 0
-  speed: 5
+  speed: 2
   BholeRadius: 5
 --- !u!1001 &100100000
 Prefab:
@@ -142,6 +142,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

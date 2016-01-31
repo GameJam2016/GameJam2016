@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
-  MyAttribute: 1
+  MyAttribute: 0
   bIsStunned: 0
   bIsDamaged: 0
   DamageCooldown: 1
@@ -200,7 +200,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e3baec6559234bd4092997cd4f1e935f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4dc708fbe1f75394aabd5256f0e59a38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -228,9 +228,22 @@ Prefab:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_Controller
+      propertyPath: m_Name
+      value: Natural Golem
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: crowdControlled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 9100000, guid: 08a6c7b4a97a91145917caae13b9f096, type: 2}
+      objectReference: {fileID: 21300000, guid: 4dc708fbe1f75394aabd5256f0e59a38,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: MyAttribute
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 166250}

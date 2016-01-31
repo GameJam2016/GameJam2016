@@ -55,7 +55,7 @@ public class OffensiveDemonic : Spell
    //     if (duration > 0.8)
      //       Destroy(this.gameObject);
 
-        if (BeamAnimation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("beam2"))
+        if (transform.childCount <= 0)
         {
             Destroy(this.gameObject);
             // Avoid any reload.
