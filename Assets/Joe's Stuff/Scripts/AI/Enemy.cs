@@ -11,8 +11,8 @@ public enum attribute
 
 public class Enemy : DamageableObject
 {
-    protected Rigidbody2D myRigid;
-    protected GameObject player;
+    public Rigidbody2D myRigid;
+    public GameObject player;
     // Status effects.
    public bool damaged, stunned, crowdControlled, attacked;
     [HideInInspector] public GameObject leftBound, rightBound, spawner;
