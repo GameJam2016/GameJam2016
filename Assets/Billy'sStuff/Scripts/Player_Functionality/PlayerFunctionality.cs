@@ -105,7 +105,11 @@ public class PlayerFunctionality : MonoBehaviour
 
         Debug.DrawRay(transform.position, -Vector2.up, Color.red, 1.0f);
 
+        //Debug.Log(Physics2D.Raycast(gameObject.transform.position, -Vector2.up, groundCheckRange, ~(1 << LayerMask.NameToLayer("Player"))).collider.name);
+
         return Physics2D.Raycast(gameObject.transform.position, -Vector2.up, groundCheckRange, ~(1 << LayerMask.NameToLayer("Player")));
+      
+        
 
         //Debug.Log("name: " + hit.collider.name);
         //if(hit.collider.tag != "Player")

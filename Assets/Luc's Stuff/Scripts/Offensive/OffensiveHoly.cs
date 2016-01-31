@@ -12,13 +12,15 @@ public class OffensiveHoly : Spell
     public GameObject enemy;
     public float direction;
     int beamNumber;
+    public GameObject currentBeam;
+    public GameObject BeamAnimation;
 
 	// Use this for initialization
 	void Start () {
         beamNumber = 0;
         duration = 0;
         player = GameObject.FindGameObjectWithTag("Player");
-        
+        this.transform.position = player.transform.position;
         if (player.transform.localScale.x < 0)
             direction = -1;
         else if (player.transform.localScale.x > 0)
@@ -35,26 +37,33 @@ public class OffensiveHoly : Spell
         {
             Beam();
             beamNumber++;
-        }
+       }
         if (duration > 2 && beamNumber == 2)
         {
             Beam();
-            Destroy(this.gameObject);
+            beamNumber++;
+
         }
+        if (duration > 3)
+            Destroy(this.gameObject);
 	}
 
     void Beam()
     {
+        if (currentBeam != null)
+            Destroy(currentBeam);
         float position = Random.Range(minRange, MaxRange);
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(position * direction + player.transform.position.x, 20), new Vector2(0, -1));
-
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2((position * direction )+ this.transform.position.x, this.transform.position.y + 3), new Vector2(0, -1));
     //    if (!hit)
     //        return;
-        Debug.DrawLine(player.transform.position + new Vector3(position, 20 * direction, 0), hit.point, Color.red, 100);
-        Debug.Log(hit.collider.tag);
+        Debug.DrawLine(this.transform.position + new Vector3(position * direction, this.transform.position.y + 3, 0), hit.point, Color.red, 100);
+      //  Debug.Log(hit.collider.tag);
+         currentBeam = (GameObject)Instantiate(BeamAnimation, hit.point + new Vector2(0,2),Quaternion.identity);
+         currentBeam.transform.parent = this.transform;
+
         if (hit.collider.gameObject.tag == "Enemy")
         {
-      //      hit.collider.gameObject.GetComponent<Enemy>().Health -= Damage;
+           hit.collider.gameObject.GetComponent<Enemy>().Health -= Damage;
             DamageManager.Instance.SendDamage(this.gameObject, hit.collider.gameObject.GetComponent<Enemy>(), attribute.Holy, Damage, false);
         }
 

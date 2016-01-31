@@ -51,9 +51,9 @@ public class OffensiveDemonic : Spell
 
     void Update()
     {
-     //   duration += Time.deltaTime;
-   //     if (duration > 0.8)
-     //       Destroy(this.gameObject);
+        duration += Time.deltaTime;
+        if (duration > 0.6)
+            Destroy(this.gameObject);
 
         if (BeamAnimation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("beam2"))
         {

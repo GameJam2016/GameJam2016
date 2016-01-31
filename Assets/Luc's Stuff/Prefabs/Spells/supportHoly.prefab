@@ -1,17 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &163654
+--- !u!1 &111686
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 441252}
-  - 33: {fileID: 3393036}
-  - 23: {fileID: 2321260}
-  - 114: {fileID: 11458512}
-  - 58: {fileID: 5857654}
+  - 4: {fileID: 422758}
+  - 33: {fileID: 3393622}
+  - 23: {fileID: 2376300}
+  - 114: {fileID: 11492214}
+  - 58: {fileID: 5811560}
   m_Layer: 0
   m_Name: supportHoly
   m_TagString: Untagged
@@ -19,25 +19,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &441252
+--- !u!4 &422758
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163654}
+  m_GameObject: {fileID: 111686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9183397, y: -1.12, z: 29.207401}
+  m_LocalPosition: {x: 323.76578, y: -292.90503, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2321260
+--- !u!23 &2376300
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163654}
-  m_Enabled: 0
+  m_GameObject: {fileID: 111686}
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -57,39 +57,39 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3393036
+--- !u!33 &3393622
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163654}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!58 &5857654
+  m_GameObject: {fileID: 111686}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!58 &5811560
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163654}
+  m_GameObject: {fileID: 111686}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.000000059604645, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
---- !u!114 &11458512
+  m_Radius: 1
+--- !u!114 &11492214
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163654}
+  m_GameObject: {fileID: 111686}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 889066f282cd2f94f9e57a0fc3b0c714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 41.37021
+  ManaCost: 22.265133
   Description: 
   Type: 1
   Attr: 0
@@ -107,22 +107,7 @@ Prefab:
       value: 
       objectReference: {fileID: 11451092, guid: d122566dd52475e48ae6cd87a2eab390,
         type: 2}
-    - target: {fileID: 0}
-      propertyPath: Attr
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-<<<<<<< HEAD
-      propertyPath: SpellImage
-      value: 
-      objectReference: {fileID: 11451092, guid: d122566dd52475e48ae6cd87a2eab390,
-        type: 2}
-=======
-      propertyPath: Type
-      value: 1
-      objectReference: {fileID: 0}
->>>>>>> a04eaa814195cbc344d2965f84f064121e4cb304
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 163654}
+  m_RootGameObject: {fileID: 111686}
   m_IsPrefabParent: 1
