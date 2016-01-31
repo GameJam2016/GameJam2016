@@ -8,6 +8,8 @@ public class PlayerStatus : DamageableObject
     public bool bIsInvisible = false;
     public GameObject[] MySpells = new GameObject[15];
     public Animator myAnimator;
+    public int TotalShinesVisited;
+    public GameObject LastShrineVisited;
 
     // Use this for initialization
     void Start()
@@ -18,7 +20,10 @@ public class PlayerStatus : DamageableObject
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.E)) 
+        {
+            Health -= 10.0f;
+        }
     }
 
     public void AddSpell(int num)

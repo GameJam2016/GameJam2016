@@ -10,6 +10,7 @@ public class Shrine : MonoBehaviour
     private GameObject m_Inventory;
     [SerializeField]
     private GameObject SpellManagerObject;
+    
     void Start()
     {
         
@@ -23,6 +24,7 @@ public class Shrine : MonoBehaviour
                 other.gameObject.GetComponent<PlayerStatus>().AddSpell(numOfCardsToReward);
                 SpellManagerObject.GetComponent<SpellManager>().IncreaseSpellRevolverSize();
                 FirstTime = false;
+                other.GetComponent<PlayerStatus>().TotalShinesVisited += 1;
             }
 
             if (InputManager.Instance.GetKey("OpenInventory") && m_Inventory.activeInHierarchy == false)
@@ -31,7 +33,9 @@ public class Shrine : MonoBehaviour
                 m_Inventory.GetComponent<InventoryHandler>().StartInventory();
                 SpellManagerObject.GetComponent<SpellManager>().InventoryOpen = true;
             }
-
+            other.GetComponent<PlayerStatus>().LastShrineVisited = this.gameObject;
+            other.GetComponent<PlayerStatus>().Mana = other.GetComponent<PlayerStatus>().TotalShinesVisited * other.GetComponent<PlayerStatus>().MaxMana;
+            other.GetComponent<PlayerStatus>().Health = 100.0f;
         }
     }
 }

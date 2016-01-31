@@ -20,7 +20,7 @@ public class OffensiveDemonic : Spell
         else if (player.transform.localScale.x > 0)
             direction = 1;
 
-        Debug.DrawLine(player.transform.position, player.transform.position + new Vector3(player.transform.position.x + (maxRange * direction), player.transform.position.y, player.transform.position.z), Color.white, 100);
+        Debug.DrawLine(player.transform.position, player.transform.position + (direction * (new Vector3(player.transform.position.x + maxRange , 0, 0))), Color.white, 100);
         hits = Physics2D.RaycastAll(player.transform.position, new Vector3(direction, 0, 0));
     
         for (int i = 0; i < hits.Length; i++)
