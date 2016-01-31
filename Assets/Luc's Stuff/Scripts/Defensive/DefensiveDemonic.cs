@@ -7,6 +7,7 @@ public class DefensiveDemonic : Spell
     public float InvisTime = 3.0f;
 
     private GameObject m_Player;
+    public GameObject m_Anim;
 
     // Use this for initialization
     void Start ()
@@ -14,6 +15,9 @@ public class DefensiveDemonic : Spell
         m_Player = GameObject.FindGameObjectWithTag("Player");
         m_Player.GetComponent<DamageableObject>().Health += HealAmount;
         StartCoroutine(COInvis());
+        
+        m_Anim = (GameObject)Instantiate(m_Anim, m_Player.transform.position, transform.rotation);
+        m_Anim.transform.parent = this.transform;
     }
 
     IEnumerator COInvis()
@@ -31,8 +35,17 @@ public class DefensiveDemonic : Spell
         //render.enabled = true;
         sprite.enabled = true;
         m_Player.GetComponent<PlayerStatus>().bIsInvisible = false;
+        Destroy(gameObject);
     }
 
+
+    void Update()
+    {
+        if(m_Anim)
+        {
+            m_Anim.transform.position = m_Player.transform.position;
+        }
+    }
 
     public override void Randomize(PlayerStatus status)
     {

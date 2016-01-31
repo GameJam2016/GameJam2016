@@ -12,4 +12,9 @@ public class AnimDestroy : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void DestroyThis()
+    {
+        Destroy(gameObject);
+    }
 }

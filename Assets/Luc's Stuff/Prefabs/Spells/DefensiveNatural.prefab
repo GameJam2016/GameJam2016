@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.204223, y: -1.3930398, z: 0}
+  m_LocalPosition: {x: 312.79346, y: -293.08734, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,15 +39,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cfe4f575416ee640bafbcfd0698c3af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 38.966484
+  ManaCost: 1.9410849
   Description: 
   Type: 2
   Attr: 2
   SpellImage: {fileID: 11418402, guid: ec36211382e61064a9e5a81a940530e7, type: 2}
   Cooldown: 0
-  HealAmount: 7.793297
+  HealAmount: 0.38821697
   ShieldTime: 2
   ShieldAmount: 20
+  m_anim: {fileID: 183302, guid: cb6fbe1b110f555448f5ab9e9d2546e2, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
