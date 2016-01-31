@@ -69,8 +69,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numOfCardsToReward: 3
-  m_Inventory: {fileID: 182194, guid: d0be54a555144364b963209f0e7b0952, type: 2}
-  SpellManagerObject: {fileID: 147580, guid: e0592b54406a138409bf4deb55db662d, type: 2}
+  m_Inventory: {fileID: 0}
+  SpellManagerObject: {fileID: 0}
 --- !u!212 &21262926
 SpriteRenderer:
   m_ObjectHideFlags: 1
