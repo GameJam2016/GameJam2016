@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6e90e76e8722982409707b8f21524a14
-timeCreated: 1454210309
+timeCreated: 1454260755
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -115,17 +115,6 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: 3_WispSprite_5
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 55
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: 3_WispSprite_6
       rect:
         serializedVersion: 2
@@ -137,17 +126,6 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: 3_WispSprite_7
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 55
-        width: 6
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: 3_WispSprite_8
       rect:
         serializedVersion: 2
@@ -155,17 +133,6 @@ TextureImporter:
         y: 39
         width: 45
         height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: 3_WispSprite_9
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 45
-        width: 4
-        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

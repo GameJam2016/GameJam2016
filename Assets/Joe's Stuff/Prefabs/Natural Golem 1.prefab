@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
-  MyAttribute: 1
+  MyAttribute: 2
   bIsStunned: 0
   bIsDamaged: 0
   DamageCooldown: 1
@@ -234,6 +234,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: crowdControlled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: MyAttribute
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

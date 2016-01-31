@@ -3934,27 +3934,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476712, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 167738, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
       propertyPath: golem.spawnNumber
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
-      propertyPath: golem.spawnTime
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
-      propertyPath: timeDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
-      propertyPath: golem.spawn
+      propertyPath: golem.spawnAttribute
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
