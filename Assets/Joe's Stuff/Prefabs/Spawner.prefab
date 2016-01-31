@@ -115,15 +115,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eyeCrawler:
     spawn: 0
-    spawnNumber: 0
-    spawnTime: 0
-    spawnAttribute: 2
+    spawnNumber: 1
+    spawnTime: 1
+    spawnAttribute: 1
     enemyPrefab:
     - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 158332, guid: 2cbfa22efcc7a534f829cda3232be98a, type: 2}
     - {fileID: 0}
   golem:
-    spawn: 1
+    spawn: 0
     spawnNumber: 1
     spawnTime: 1
     spawnAttribute: 2
@@ -137,7 +137,7 @@ MonoBehaviour:
     spawnTime: 0
     spawnAttribute: 0
     enemyPrefab:
-    - {fileID: 0}
+    - {fileID: 153240, guid: ae7a099a8bfaf3d4795a5cf7e031ce4b, type: 2}
     - {fileID: 0}
     - {fileID: 0}
   leftBound: {fileID: 152786}
