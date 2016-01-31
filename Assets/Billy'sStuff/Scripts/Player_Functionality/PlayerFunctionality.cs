@@ -49,7 +49,7 @@ public class PlayerFunctionality : MonoBehaviour
     {
         thisRigidBody.velocity = new Vector2(0, thisRigidBody.velocity.y);
     }
-
+                               
     public void Jump()
     {
         if(bIsGrounded || bOnLadder)
