@@ -17,6 +17,7 @@ public class Wisp : Enemy
 	// Update is called once per frame
 	void Update ()
     {
+        CheckHealth();
         // If we haven't already seen the player, we check to see if we see the player.
         if (!alerted)
         {

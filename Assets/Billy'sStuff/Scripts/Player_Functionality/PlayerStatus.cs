@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerStatus : DamageableObject
 {
-    public float Mana = 0;
-    public float MaxMana = 50;
+    public float Mana;
+    public float MaxMana;
     public bool bIsInvisible = false;
     public GameObject[] MySpells = new GameObject[15];
     public Animator myAnimator;
@@ -15,6 +15,16 @@ public class PlayerStatus : DamageableObject
     void Start()
     {
         myAnimator = GetComponentInChildren<Animator>();
+        if(Mana == 0)
+        {
+            Mana = 30;
+        }
+
+        if(MaxMana == 0)
+        {
+            MaxMana = 50;
+
+        }
     }
 
     // Update is called once per frame

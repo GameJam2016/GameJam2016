@@ -19,6 +19,7 @@ public class EyeCrawler : Enemy
     // Update is called once per frame
     void Update()
     {
+        CheckHealth();
         alerted = alert();
 
         if (alerted && killTime())
