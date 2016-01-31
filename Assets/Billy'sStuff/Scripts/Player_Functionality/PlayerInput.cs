@@ -54,7 +54,7 @@ public class PlayerInput : PlayerFunctionality
         }
 
        
-        if(InputManager.Instance.GetKey("Attack"))
+        if(InputManager.Instance.GetKey("Attack") && Application.loadedLevelName != "LevelSelect")
         {
             if (!bIsAttacking)
             {

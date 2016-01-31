@@ -10,19 +10,19 @@ public class LoadLevels : MonoBehaviour
             SceneManagement.LoadScene(1);
         }
 
-        if (this.gameObject.tag == "Level1" && InputManager.Instance.GetKeyDown("EnterWorld"))
+        if (ColliderStay.gameObject.tag == "Level1" && InputManager.Instance.GetKeyDown("EnterWorld"))
         {
-            Application.LoadLevel(2);
+            SceneManagement.LoadScene(2);
         }
 
-        if (this.gameObject.tag == "Level2" && InputManager.Instance.GetKeyDown("EnterWorld"))
+        if (ColliderStay.gameObject.tag == "Level2" && InputManager.Instance.GetKeyDown("EnterWorld"))
         {
-            Application.LoadLevel(3);
+            SceneManagement.LoadScene(3);
         }
 
-        if (this.gameObject.tag == "Level2" && InputManager.Instance.GetKeyDown("EnterWorld"))
+        if (ColliderStay.gameObject.tag == "ReturnToLevelSelect" && InputManager.Instance.GetKeyDown("EnterWorld"))
         {
-            Application.LoadLevel(0);
+            SceneManagement.LoadScene(0);
         }
     }
 }
