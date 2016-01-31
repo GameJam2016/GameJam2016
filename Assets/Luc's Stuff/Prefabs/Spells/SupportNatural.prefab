@@ -89,14 +89,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e553b9670069034fa27bdc4cd9333bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 0
+  ManaCost: 41.449898
   Description: 
   Type: 1
   Attr: 2
-  SpellImage: {fileID: 0}
+  SpellImage: {fileID: 11468040, guid: 2b56ec0ab4bbdf34ea0318a1d2fc1b80, type: 2}
   Cooldown: 0
   Duration: 0
-  Radius: 0
+  Radius: 5
   player: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
@@ -104,7 +104,16 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: SpellImage
+      value: 
+      objectReference: {fileID: 11468040, guid: 2b56ec0ab4bbdf34ea0318a1d2fc1b80,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141854}

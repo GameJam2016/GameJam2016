@@ -5,11 +5,11 @@ public class SupportDemonic :  Spell {
 
     public float range;
     public GameObject player;
-    float duration;
-    bool BHole;
+ public   float duration;
+ public   bool BHole;
     public float speed;
     float direction;
-    float BholeRadius;
+   public  float BholeRadius;
 	// Use this for initialization
 	void Start () {
         
@@ -28,9 +28,10 @@ public class SupportDemonic :  Spell {
 	
 	// Update is called once per frame
 	void Update () {
+        shoot();
         if(BHole)
         duration += Time.deltaTime;
-        if (duration > 6)
+        if (duration > 1)
             Destroy(this.gameObject);
 	}
 
@@ -56,6 +57,7 @@ public class SupportDemonic :  Spell {
 
     void BlackHole()
     {
+        this.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         this.GetComponent<CircleCollider2D>().radius = BholeRadius;
 
     }
