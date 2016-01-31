@@ -7,7 +7,8 @@ public class spawnChoice
     [SerializeField] public bool spawn;
     [SerializeField] public int spawnNumber;
     [SerializeField] public float spawnTime;
-    [SerializeField] public GameObject enemyPrefab;
+    [SerializeField] public attribute spawnAttribute;
+    [SerializeField] public GameObject [] enemyPrefab = new GameObject [3];
 };
 
 public class EnemySpawner : MonoBehaviour
@@ -109,10 +110,11 @@ public class EnemySpawner : MonoBehaviour
                 toSpawn.spawnNumber--;
                 location = Random.insideUnitCircle * range;
                 location.y = Mathf.Abs(location.y);
-                spawnThing = Instantiate(toSpawn.enemyPrefab, location, Quaternion.identity) as GameObject;
+                spawnThing = Instantiate(toSpawn.enemyPrefab[(int)toSpawn.spawnAttribute], location, Quaternion.identity) as GameObject;
                 spawnThing.GetComponent<Enemy>().leftBound = leftBound;
                 spawnThing.GetComponent<Enemy>().rightBound = rightBound;
                 spawnThing.GetComponent<Enemy>().spawner = this.gameObject;
+                spawnThing.GetComponent<Enemy>().MyAttribute = toSpawn.spawnAttribute;
             }
         } while (onScreen && !playerNear && toSpawn.spawnNumber != 0);
     }

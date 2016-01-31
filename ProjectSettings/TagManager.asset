@@ -3,20 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Enemy
-  - Cards
-  - SpellSlots
-  - Spell
-  - Ladder
-  - SpellManagaer
-<<<<<<< HEAD
-  - Wall
-=======
-  - Tutorial
-  - Level1
-  - Level2
->>>>>>> a04eaa814195cbc344d2965f84f064121e4cb304
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -26,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - Enemy
+  - 
+  - 
   - 
   - 
   - 
@@ -51,12 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: BackGround
-    uniqueID: 301106391
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: ForeGround
-    uniqueID: 53437903
     locked: 0
