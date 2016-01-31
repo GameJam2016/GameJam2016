@@ -167,7 +167,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 94716999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -224,73 +224,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
       propertyPath: eyeCrawler.spawn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
       propertyPath: eyeCrawler.spawnNumber
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
       propertyPath: eyeCrawler.spawnTime
-      value: 5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: golem.spawn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: golem.spawnNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: golem.spawnTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481458, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+      propertyPath: timeDelay
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &612029747
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 612029748}
-  m_Layer: 0
-  m_Name: Right Bound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &612029748
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 612029747}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!1 &768588300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 768588301}
-  m_Layer: 0
-  m_Name: Left Bound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &768588301
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 768588300}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
 --- !u!1 &1065214314
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +329,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &1573106782
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,4 +467,25 @@ Transform:
   m_LocalScale: {x: 9.34, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
+--- !u!1 &1854736206 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 167738, guid: 7e08c89b544b83842819e73417ae4881, type: 2}
+  m_PrefabInternal: {fileID: 343743216}
+--- !u!95 &1854736209
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1854736206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09afcde20244e5c43b547cc3c7af8260, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1

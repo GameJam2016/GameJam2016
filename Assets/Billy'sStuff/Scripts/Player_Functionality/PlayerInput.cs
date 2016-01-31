@@ -67,7 +67,7 @@ public class PlayerInput : PlayerFunctionality
         //    Debug.Log("parry");
         //}
 
-        if(InputManager.Instance.GetKeyDown("Cast"))
+        if (InputManager.Instance.GetKeyDown("Cast") || Input.GetKeyDown(KeyCode.Z))
         {
             CastSpell();
         }

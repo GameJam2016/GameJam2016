@@ -1,0 +1,285 @@
+fileFormatVersion: 2
+guid: 07b209c9427c2fb479d5fa4ae70ca8b5
+timeCreated: 1454210328
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PoisonDartSprite_0
+    21300002: PoisonDartSprite_1
+    21300004: PoisonDartSprite_2
+    21300006: PoisonDartSprite_3
+    21300008: PoisonDartSprite_4
+    21300010: PoisonDartSprite_5
+    21300012: PoisonDartSprite_6
+    21300014: PoisonDartSprite_7
+    21300016: PoisonDartSprite_8
+    21300018: PoisonDartSprite_9
+    21300020: PoisonDartSprite_10
+    21300022: PoisonDartSprite_11
+    21300024: PoisonDartSprite_12
+    21300026: PoisonDartSprite_13
+    21300028: PoisonDartSprite_14
+    21300030: PoisonDartSprite_15
+    21300032: PoisonDartSprite_16
+    21300034: PoisonDartSprite_17
+    21300036: PoisonDartSprite_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PoisonDartSprite_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 32
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 31
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_2
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 31
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 31
+        width: 36
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 32
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_5
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 31
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_6
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 31
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_7
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 31
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_8
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 31
+        width: 27
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_9
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 31
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 31
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_11
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 31
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 31
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_13
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 31
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_14
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 8
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_15
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 8
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_16
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 8
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_17
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 8
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: PoisonDartSprite_18
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 8
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

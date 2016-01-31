@@ -7,7 +7,7 @@ public class SupportHoly : Spell {
     float duration;
 	// Use this for initialization
 	void Start () {
-        duration += Time.deltaTime;
+        
         player = GameObject.FindGameObjectWithTag("Player");
         this.transform.position = player.transform.position;
 
@@ -16,9 +16,9 @@ public class SupportHoly : Spell {
 	
 	// Update is called once per frame
 	void Update () {
-        if (duration > 6)
+        if (duration > 0.1)
             Destroy(this.gameObject);
-	
+        duration += Time.deltaTime;
 	}
 
     void OnTriggerEnter2D(Collider2D other)

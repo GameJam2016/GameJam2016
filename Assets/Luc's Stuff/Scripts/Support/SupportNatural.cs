@@ -31,6 +31,7 @@ public class SupportNatural : Spell {
     {
         if(other.gameObject.tag == "Enemy")
         {
+            Debug.Log("Billy");
             other.gameObject.GetComponent<Enemy>().crowdControl(this.gameObject, ManaCost, attribute.Natural);
         }
     }
