@@ -38,6 +38,8 @@ public class PlayerStatus : DamageableObject
                 gController.Win();
             }
         }
+
+        CheckHealth();
     }
 
     void OnTriggerEnter2D(Collider2D CollisionEnter)
@@ -64,6 +66,14 @@ public class PlayerStatus : DamageableObject
                     break;
                 }
             }
+        }
+    }
+
+    void CheckHealth()
+    {
+        if (Health <= 0.0f)
+        {
+            transform.position = LastShrineVisited.transform.position;
         }
     }
 }

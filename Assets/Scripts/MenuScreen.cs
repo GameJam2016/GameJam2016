@@ -15,7 +15,7 @@ public class MenuScreen : MonoBehaviour
 
         if(Input.anyKeyDown)
         {
-            SceneManagement.LoadSceneAdditive(0);
+            SceneManagement.LoadSceneAdditive(1);
             Destroy(gameObject);
         }
 	

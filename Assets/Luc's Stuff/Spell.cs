@@ -12,7 +12,10 @@ public class Spell : MonoBehaviour
     public Image SpellImage;
     public float Cooldown;
 
-
+    void Awake()
+    {
+        
+    }
 
     public virtual void Randomize(PlayerStatus status)
     {

@@ -28,71 +28,34 @@ public class EnemySpawner : MonoBehaviour
     // onScreen indicates that the spawner is visible, and can start spawning. playerNear indicates a player is too near, and
     // no enemies will spawn.
 
-    private bool onScreen, playerNear, spawning;
+    private bool spawning;
     private GameObject player;
 
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Camera.main.WorldToViewportPoint(this.transform.position).x < 1 && Camera.main.WorldToViewportPoint(this.transform.position).x > 0 && Camera.main.WorldToViewportPoint(this.transform.position).y < 1 && Camera.main.WorldToViewportPoint(this.transform.position).y > 0 && Camera.main.WorldToViewportPoint(this.transform.position).z > 0)
-        {
-            onScreen = true;
-        }
-
-        else
-        {
-            onScreen = false;
-            spawning = false;
-        }
-
-        if ((player.transform.position - this.transform.position).magnitude > 2)
-        {
-            playerNear = false;
-        }
-
-        else
-        {
-            playerNear = true;
-            spawning = false;
-        }
-
-        if (onScreen && !playerNear && !spawning)
-        {
-            spawning = true;
-            StartCoroutine(startUp(timeDelay));
-        }
-    }
-
-    IEnumerator startUp (float timeLimit)
-    {
-        float timePassed = 0;
-        do
-        {
-            timePassed += Time.deltaTime;
-            yield return null;
-        } while (timePassed < timeLimit);
-        
         if (eyeCrawler.spawn)
         {
             StartCoroutine(spawnTimer(eyeCrawler));
-        }
-
-        if (wisp.spawn)
-        {
-            StartCoroutine(spawnTimer(wisp));
         }
 
         if (golem.spawn)
         {
             StartCoroutine(spawnTimer(golem));
         }
+
+        if (wisp.spawn)
+        {
+            StartCoroutine(spawnTimer(wisp));
+        }
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
+
 
     IEnumerator spawnTimer (spawnChoice toSpawn)
     {
@@ -108,7 +71,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 timePassed = 0;
                 toSpawn.spawnNumber--;
-                location = Random.insideUnitCircle * range;
+                location = (Random.insideUnitCircle * range)+ new Vector2(this.transform.position.x, this.transform.position.y);
                 location.y = Mathf.Abs(location.y);
                 spawnThing = Instantiate(toSpawn.enemyPrefab[(int)toSpawn.spawnAttribute], location, Quaternion.identity) as GameObject;
                 spawnThing.GetComponent<Enemy>().leftBound = leftBound;
@@ -117,6 +80,6 @@ public class EnemySpawner : MonoBehaviour
                 spawnThing.GetComponent<Enemy>().MyAttribute = toSpawn.spawnAttribute;
                 
             }
-        } while (onScreen && !playerNear && toSpawn.spawnNumber != 0);
+        } while (toSpawn.spawnNumber != 0);
     }
 }

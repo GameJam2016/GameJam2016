@@ -54,7 +54,7 @@ public class PlayerInput : PlayerFunctionality
         }
 
        
-        if(InputManager.Instance.GetKey("Attack") && Application.loadedLevelName != "LevelSelect")
+        if(InputManager.Instance.GetKey("Attack") || Input.GetKey(KeyCode.J))
         {
             if (!bIsAttacking)
             {
@@ -67,7 +67,7 @@ public class PlayerInput : PlayerFunctionality
         //    Debug.Log("parry");
         //}
 
-        if (InputManager.Instance.GetKeyDown("Cast") || Input.GetKeyDown(KeyCode.Z))
+        if (InputManager.Instance.GetKeyDown("Cast") || Input.GetKeyDown(KeyCode.E))
         {
             CastSpell();
         }

@@ -56,18 +56,20 @@ public class DamageManager : MonoBehaviour
 
         damageTo.Health -= damageDone;
 
-        Rigidbody2D body = damageTo.gameObject.GetComponent<Rigidbody2D>();
-        if(body)
-        {
-            if (damageSender.transform.position.x < damageTo.gameObject.transform.position.x)
+        if(damageTo.gameObject.tag != "Player")
+        { 
+            Rigidbody2D body = damageTo.gameObject.GetComponent<Rigidbody2D>();
+            if(body)
             {
-                body.AddForce((Vector2.up + Vector2.right) * 250.0f);
+                if (damageSender.transform.position.x < damageTo.gameObject.transform.position.x)
+                {
+                    body.AddForce((Vector2.up + Vector2.right) * 250.0f);
+                }
+                else
+                {
+                    body.AddForce((Vector2.up - Vector2.right) * 250.0f);
+                }
             }
-            else
-            {
-                body.AddForce((Vector2.up - Vector2.right) * 250.0f);
-            }
-
         }
 
         if (bIsStun)

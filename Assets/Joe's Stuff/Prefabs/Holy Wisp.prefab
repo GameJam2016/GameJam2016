@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.0001
 --- !u!95 &9504870
 Animator:
   serializedVersion: 3
@@ -184,7 +184,7 @@ MonoBehaviour:
   damage: 10
   startSpeed: 3
   moveSpeed: 3
-  attackSpeed: 1
+  attackSpeed: 2
   crowdTime: 1
   pushPullScalar: 1
   slowScalar: 1
@@ -300,6 +300,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: moveSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -26,7 +26,7 @@ public class ManaHealth : MonoBehaviour
 	void Update ()
     {
         UpdateHealthMana();
-        CheckHealth();
+
     }
 
     void UpdateHealthMana()
@@ -35,11 +35,5 @@ public class ManaHealth : MonoBehaviour
         Health.fillAmount = (Player.Health / 100);
     }
 
-    void CheckHealth()
-    {
-        if(Player.Health <= 0.0f)
-        {
-            Player.transform.position = Player.LastShrineVisited.transform.position;
-        }
-    }
+
 }

@@ -72,6 +72,7 @@ public class PlayerFunctionality : MonoBehaviour
             {
                 Instantiate(m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot], transform.position, transform.rotation);
                 Player.GetComponent<PlayerStatus>().Mana -= cardInstance.GetComponent<Spell>().ManaCost;
+                Player.GetComponent<PlayerStatus>().MyAttribute = cardInstance.GetComponent<Spell>().Attr;
             }
         }
     }
