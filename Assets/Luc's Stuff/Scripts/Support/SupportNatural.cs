@@ -13,7 +13,6 @@ public class SupportNatural : Spell {
         this.transform.position = player.transform.position;
         Duration = 0;
         this.GetComponent<CircleCollider2D>().radius = Radius;
-        anim = (GameObject)Instantiate(anim, transform.position, transform.rotation);
         anim.transform.parent = gameObject.transform;
         
 	}

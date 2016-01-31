@@ -54,13 +54,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e553b9670069034fa27bdc4cd9333bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 41.449898
+  ManaCost: 8.316952
   Description: 
   Type: 1
   Attr: 2
   SpellImage: {fileID: 11468040, guid: 2b56ec0ab4bbdf34ea0318a1d2fc1b80, type: 2}
-  Cooldown: 0
-  Duration: 0
+  Cooldown: 1
+  Duration: 1
   Radius: 5
   player: {fileID: 0}
   anim: {fileID: 188460, guid: dcf6f4b816d298e46a99d3618690edf5, type: 2}
@@ -84,6 +84,14 @@ Prefab:
       propertyPath: anim
       value: 
       objectReference: {fileID: 188460, guid: dcf6f4b816d298e46a99d3618690edf5, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Duration
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141854}
