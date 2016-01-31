@@ -4,7 +4,7 @@ using System.Collections;
 public class Wisp : Enemy
 {
     // Whether we have seen the player, whether we are in the process of moving.
-    private bool alerted, moving;
+    public bool alerted, moving;
     // The speed at which we chase and dash.
     public float chaseSpeed;
 	// Use this for initialization
