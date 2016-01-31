@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Golem : Enemy
 {
-    private bool alerted, moving;
+    public bool alerted, moving, attacking;
     private Vector2 leftDirection, rightDirection;
 
     public GameObject attackCollider;
@@ -20,6 +20,7 @@ public class Golem : Enemy
 	// Update is called once per frame
 	void Update () 
     {
+
         alerted = alert();
 
         // We attacked, so no other actions.
@@ -55,7 +56,7 @@ public class Golem : Enemy
         }
     }
 
-    bool killTime()
+    public bool killTime()
     {
         if ((this.transform.position - player.transform.position).magnitude <= 2 && !stunned && !attacked)
         {
