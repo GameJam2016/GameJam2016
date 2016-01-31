@@ -13,12 +13,13 @@ public class PlayerFunctionality : MonoBehaviour
     public bool bHasJumped = false;
     public bool bIsAttacking = false;
     [SerializeField] float groundCheckRange = 1.0f;
-	
+    private SpellManager m_SpellManager;
 
     // Use this for initialization
     public void PlayerInitialize()
     {
         thisRigidBody = gameObject.GetComponent<Rigidbody2D>();
+        m_SpellManager = GameObject.Find("RevolverBackGround").GetComponent<SpellManager>();
     }
 
     //movement
@@ -48,7 +49,7 @@ public class PlayerFunctionality : MonoBehaviour
     {
         thisRigidBody.velocity = new Vector2(0, thisRigidBody.velocity.y);
     }
-
+                               
     public void Jump()
     {
         if(bIsGrounded || bOnLadder)
@@ -61,33 +62,15 @@ public class PlayerFunctionality : MonoBehaviour
 
     public void CastSpell()
     {
-        if(!GetComponent<PlayerStatus>().MySpells[currentSpell])
+        if(m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot] != null)
         {
-            return;
-        }
-        Instantiate(GetComponent<PlayerStatus>().MySpells[currentSpell], transform.position, transform.rotation);
-
-    }
-
-    public void ChangeSpellRight()
-    {
-        currentSpell++;
-        if (currentSpell > 14 || !GetComponent<PlayerStatus>().MySpells[currentSpell])
-        {
-            currentSpell = 0;
-        }
-    }
-
-    public void ChangeSpellLeft()
-    {
-        currentSpell--;
-        if(currentSpell < 0)
-        {
-            currentSpell = 14;
-        }
-        while(!GetComponent<PlayerStatus>().MySpells[currentSpell])
-        {
-            currentSpell--;
+            GameObject cardInstance = m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot];
+            GameObject Player = GameObject.FindGameObjectWithTag("Player");
+            if(Player.GetComponent<PlayerStatus>().Mana - cardInstance.GetComponent<Spell>().ManaCost > 0.0f)
+            {
+                Instantiate(m_SpellManager.Spells[m_SpellManager.CurrentRevolverSlot], transform.position, transform.rotation);
+                Player.GetComponent<PlayerStatus>().Mana -= cardInstance.GetComponent<Spell>().ManaCost;
+            }
         }
     }
 

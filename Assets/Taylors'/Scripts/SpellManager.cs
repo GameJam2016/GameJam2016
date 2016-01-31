@@ -4,18 +4,22 @@ using UnityEngine.UI;
 
 
 //This is a UI Script
+//I need to get the players Spell Script from the player and use that to get access to the spells they have and 
+//the mana cost
 
 public class SpellManager : MonoBehaviour
 {
     public int[] SpellSlots = {1, 0, 0, 0, 0, 0};
     public Image[] SpellWheelImageArray;
     public GameObject[] Spells;
+    public bool InventoryOpen = false;
+    public GameObject Invetory;
 
     [SerializeField]private bool canChangeSpell = true;
 
     public Image RevolverUI;
 
-    [SerializeField]private int CurrentRevolverSlot = 0;
+    public int CurrentRevolverSlot = 0;
 
 
     public Animator RevolverAnimator;
@@ -29,16 +33,16 @@ public class SpellManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-	    if(Input.GetKeyDown(KeyCode.A))
-        {
-            IncreaseSpellRevolverSize();
-        }
+	    //if(Input.GetKeyDown(KeyCode.A))
+     //   {
+     //       IncreaseSpellRevolverSize();
+     //   }
 
         RotateAbilityRevolver();
 	}
 
     //Increases the amount of spells you can have available to you
-    void IncreaseSpellRevolverSize()
+    public void IncreaseSpellRevolverSize()
     {
         for (int i = 0; i < SpellSlots.Length; i++)
         {
