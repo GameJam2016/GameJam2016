@@ -5,10 +5,6 @@ public class Wisp : Enemy
 {
     // Whether we have seen the player, whether we are in the process of moving.
     private bool alerted, moving;
-    
-    
-    // The spawner location.
-    public GameObject spawner;
     // The speed at which we chase and dash.
     public float chaseSpeed;
 	// Use this for initialization

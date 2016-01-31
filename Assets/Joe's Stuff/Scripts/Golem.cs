@@ -6,10 +6,7 @@ public class Golem : Enemy
     private bool alerted, moving;
     private Vector2 leftDirection, rightDirection;
 
- //   [HideInInspector]
-    public GameObject leftBound, rightBound;
-
-    public GameObject spawner, attackCollider;
+    public GameObject attackCollider;
     public bool patrolLeft;
 
 	// Use this for initialization

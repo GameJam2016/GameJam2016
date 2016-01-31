@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11416070}
   m_Layer: 0
   m_Name: Wisp
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +116,9 @@ MonoBehaviour:
   stunned: 0
   crowdControlled: 0
   attacked: 0
+  leftBound: {fileID: 0}
+  rightBound: {fileID: 0}
+  spawner: {fileID: 0}
   damage: 0
   startSpeed: 1
   moveSpeed: 1
@@ -123,7 +126,6 @@ MonoBehaviour:
   crowdTime: 1
   pushPullScalar: 1
   slowScalar: 1
-  spawner: {fileID: 0}
   chaseSpeed: 5
 --- !u!1001 &100100000
 Prefab:
@@ -131,7 +133,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153240}

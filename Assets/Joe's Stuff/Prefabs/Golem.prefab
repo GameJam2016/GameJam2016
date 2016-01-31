@@ -31,7 +31,7 @@ GameObject:
   - 114: {fileID: 11498498}
   m_Layer: 0
   m_Name: Golem
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,6 +159,9 @@ MonoBehaviour:
   stunned: 0
   crowdControlled: 0
   attacked: 0
+  leftBound: {fileID: 0}
+  rightBound: {fileID: 0}
+  spawner: {fileID: 0}
   damage: 20
   startSpeed: 2
   moveSpeed: 5
@@ -166,9 +169,6 @@ MonoBehaviour:
   crowdTime: 1
   pushPullScalar: 1
   slowScalar: 1
-  leftBound: {fileID: 0}
-  rightBound: {fileID: 0}
-  spawner: {fileID: 0}
   attackCollider: {fileID: 136536}
   patrolLeft: 0
 --- !u!1001 &100100000
@@ -177,7 +177,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 166250}
