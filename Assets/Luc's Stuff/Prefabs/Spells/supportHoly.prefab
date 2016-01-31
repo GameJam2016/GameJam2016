@@ -103,18 +103,25 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: Type
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: SpellImage
+      value: 
+      objectReference: {fileID: 11451092, guid: d122566dd52475e48ae6cd87a2eab390,
+        type: 2}
     - target: {fileID: 0}
       propertyPath: Attr
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
+<<<<<<< HEAD
       propertyPath: SpellImage
       value: 
       objectReference: {fileID: 11451092, guid: d122566dd52475e48ae6cd87a2eab390,
         type: 2}
+=======
+      propertyPath: Type
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> a04eaa814195cbc344d2965f84f064121e4cb304
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 163654}
