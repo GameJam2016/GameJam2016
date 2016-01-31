@@ -23,7 +23,7 @@ public class EyecrawlerSpriteController : MonoBehaviour
         }
 
 
-        else if (AI.fleeing)
+        else if (AI.fleeing && AI.myRigid.velocity.magnitude > 0.2)
         {
             controller.SetBool("Stationary", false);
 
@@ -39,7 +39,7 @@ public class EyecrawlerSpriteController : MonoBehaviour
 
         }
 
-        else if (AI.moving)
+        else if (AI.myRigid.velocity.magnitude > 0.2)
         {
             controller.SetBool("Stationary", false);
 
@@ -57,6 +57,15 @@ public class EyecrawlerSpriteController : MonoBehaviour
         else
         {
             controller.SetBool("Stationary", true);
+            if (AI.patrolLeft)
+            {
+                this.transform.localScale = new Vector3(-2, this.transform.localScale.y, this.transform.localScale.z);
+            }
+
+            else
+            {
+                this.transform.localScale = new Vector3(2, this.transform.localScale.y, this.transform.localScale.z);
+            }
         }
 	}
 
