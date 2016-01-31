@@ -166,9 +166,9 @@ MonoBehaviour:
   startSpeed: 2
   moveSpeed: 5
   attackSpeed: 2
-  crowdTime: 1
-  pushPullScalar: 1
-  slowScalar: 1
+  crowdTime: 6
+  pushPullScalar: 100
+  slowScalar: 100
   attackCollider: {fileID: 136536}
   patrolLeft: 0
 --- !u!1001 &100100000
@@ -181,6 +181,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pushPullScalar
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: crowdTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: slowScalar
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
