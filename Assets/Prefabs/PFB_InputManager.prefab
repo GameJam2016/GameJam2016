@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 555.697, y: 466.2032, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,6 +42,22 @@ MonoBehaviour:
   KeysToAdd:
   - KeyName: Attack
     Code: 332
+  - KeyName: RevolverRight
+    Code: 334
+  - KeyName: RevolverLeft
+    Code: 335
+  - KeyName: CancelSelectedSpell
+    Code: 331
+  - KeyName: Cast
+    Code: 331
+  - KeyName: ExitInventory
+    Code: 337
+  - KeyName: OpenInventory
+    Code: 337
+  - KeyName: Jump
+    Code: 330
+  - KeyName: EnterWorld
+    Code: 330
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

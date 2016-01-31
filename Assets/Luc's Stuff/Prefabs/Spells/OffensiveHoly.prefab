@@ -75,16 +75,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67821e20585d30c40a3238821c72bdfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 0
+  ManaCost: 42.50075
   Description: 
   Type: 0
   Attr: 0
-  SpellImage: {fileID: 0}
+  SpellImage: {fileID: 11460004, guid: 8edb9182e58ade84db00d2e32453e529, type: 2}
   Cooldown: 0
   minRange: 0
   MaxRange: 0
   duration: 0
-  Damage: 0
+  Damage: 212.50375
   player: {fileID: 0}
   enemy: {fileID: 0}
   direction: 0
@@ -111,6 +111,11 @@ Prefab:
       propertyPath: Attr
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: SpellImage
+      value: 
+      objectReference: {fileID: 11460004, guid: 8edb9182e58ade84db00d2e32453e529,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 124572}
