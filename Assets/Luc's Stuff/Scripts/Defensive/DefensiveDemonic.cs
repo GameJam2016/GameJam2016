@@ -50,7 +50,7 @@ public class DefensiveDemonic : Spell
     public override void Randomize(PlayerStatus status)
     {
 
-        ManaCost = Random.Range(0.0f, status.MaxMana);
-        HealAmount = ManaCost / 5.0f;
+        ManaCost = Random.Range(10.0f, status.MaxMana / 2);
+        HealAmount = ManaCost * 2.0f;
     }
 }

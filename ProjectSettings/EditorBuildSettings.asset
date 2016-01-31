@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Taylors'/Scenes/LevelSelect.unity
-  - enabled: 1
     path: Assets/Taylors'/Scenes/Game.unity
+  - enabled: 1
+    path: Assets/Scenes/Game 1.unity

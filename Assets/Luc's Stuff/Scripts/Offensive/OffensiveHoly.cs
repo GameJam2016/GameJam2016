@@ -72,7 +72,7 @@ public class OffensiveHoly : Spell
     public override void Randomize(PlayerStatus status)
     {
 
-        ManaCost = Random.Range(0.0f, status.MaxMana);
-        Damage = ManaCost * 5;
+        ManaCost = Random.Range(10.0f, status.MaxMana / 2);
+        Damage = ManaCost * 2;
     }
 }

@@ -36,6 +36,6 @@ public class SupportHoly : Spell {
     public override void Randomize(PlayerStatus status)
     {
 
-        ManaCost = Random.Range(0.0f, status.MaxMana);
+        ManaCost = Random.Range(10.0f, status.MaxMana / 2);
     }
 }

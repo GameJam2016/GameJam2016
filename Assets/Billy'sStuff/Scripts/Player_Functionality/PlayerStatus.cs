@@ -11,6 +11,7 @@ public class PlayerStatus : DamageableObject
     public int TotalShinesVisited;
     public GameObject LastShrineVisited;
 
+    public GameController gController;
     // Use this for initialization
     void Start()
     {
@@ -30,7 +31,13 @@ public class PlayerStatus : DamageableObject
     // Update is called once per frame
     void Update()
     {
-       
+        if (gController)
+        {
+            if (gController.WinCount <= TotalShinesVisited)
+            {
+                gController.Win();
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D CollisionEnter)

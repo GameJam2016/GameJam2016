@@ -27,14 +27,13 @@ public class SupportNatural : Spell {
 
     public override void Randomize(PlayerStatus status)
     {
-        ManaCost = Random.Range(0.0f, status.MaxMana);
+        ManaCost = Random.Range(10.0f, status.MaxMana / 2);
     }
     
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Enemy")
-        {
-            Debug.Log("Billy");
+        {        
             other.gameObject.GetComponent<Enemy>().crowdControl(this.gameObject, ManaCost, attribute.Natural);
         }
     }

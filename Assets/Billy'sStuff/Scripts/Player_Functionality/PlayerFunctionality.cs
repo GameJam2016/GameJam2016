@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerFunctionality : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerFunctionality : MonoBehaviour
     [SerializeField] float groundCheckRange = 1.0f;
     private SpellManager m_SpellManager;
 
+    public List<GameObject> HitObjects = new List<GameObject>();
     // Use this for initialization
     public void PlayerInitialize()
     {
@@ -145,4 +147,6 @@ public class PlayerFunctionality : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         bHasJumped = false;
     }
+
+    
 }

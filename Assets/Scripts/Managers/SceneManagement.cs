@@ -21,4 +21,9 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public static void LoadSceneAdditive(int sceneNum)
+    {
+        SceneManager.LoadScene(sceneNum, LoadSceneMode.Additive);
+    }
 }
