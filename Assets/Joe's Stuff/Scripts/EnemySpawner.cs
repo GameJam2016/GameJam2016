@@ -115,6 +115,7 @@ public class EnemySpawner : MonoBehaviour
                 spawnThing.GetComponent<Enemy>().rightBound = rightBound;
                 spawnThing.GetComponent<Enemy>().spawner = this.gameObject;
                 spawnThing.GetComponent<Enemy>().MyAttribute = toSpawn.spawnAttribute;
+                
             }
         } while (onScreen && !playerNear && toSpawn.spawnNumber != 0);
     }

@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e6ac5711c21d4419f6a1ee2cf85f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 60
   MyAttribute: 1
   bIsStunned: 0
   bIsDamaged: 0
@@ -162,13 +162,13 @@ MonoBehaviour:
   leftBound: {fileID: 0}
   rightBound: {fileID: 0}
   spawner: {fileID: 0}
-  damage: 20
+  damage: 13
   startSpeed: 2
-  moveSpeed: 5
+  moveSpeed: 2
   attackSpeed: 2
   crowdTime: 6
-  pushPullScalar: 100
-  slowScalar: 100
+  pushPullScalar: 1
+  slowScalar: 1
   alerted: 0
   moving: 0
   attacking: 0
@@ -217,7 +217,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pushPullScalar
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: crowdTime
@@ -225,7 +225,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: slowScalar
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Name
@@ -247,6 +247,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Health
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damage
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

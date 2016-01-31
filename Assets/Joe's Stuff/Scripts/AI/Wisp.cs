@@ -50,7 +50,7 @@ public class Wisp : Enemy
     bool seePlayer ()
     {
         RaycastHit2D hit = Physics2D.Raycast(this.transform.position, (player.transform.position - this.transform.position));
-        if (hit.collider != null && hit.collider.gameObject.tag == "Player")
+        if (hit.collider != null && hit.collider.gameObject.tag == "Player" && !invisiblePlayer())
         {
             // Since we're chasing, we're faster.
             moveSpeed = chaseSpeed;
