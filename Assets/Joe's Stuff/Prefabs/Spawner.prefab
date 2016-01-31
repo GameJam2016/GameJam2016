@@ -24,6 +24,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 476712}
   - 114: {fileID: 11481458}
+  - 95: {fileID: 9555046}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -84,6 +85,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476712}
   m_RootOrder: 1
+--- !u!95 &9555046
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167738}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11481458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,21 +117,33 @@ MonoBehaviour:
     spawn: 0
     spawnNumber: 0
     spawnTime: 0
-    enemyPrefab: {fileID: 158332, guid: 2cbfa22efcc7a534f829cda3232be98a, type: 2}
+    spawnAttribute: 2
+    enemyPrefab:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   golem:
-    spawn: 0
-    spawnNumber: 0
-    spawnTime: 0
-    enemyPrefab: {fileID: 166250, guid: fcd5f658b32e0fe45b117c3c2098a4f1, type: 2}
+    spawn: 1
+    spawnNumber: 1
+    spawnTime: 1
+    spawnAttribute: 2
+    enemyPrefab:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 166250, guid: fcd5f658b32e0fe45b117c3c2098a4f1, type: 2}
   wisp:
     spawn: 0
     spawnNumber: 0
     spawnTime: 0
-    enemyPrefab: {fileID: 153240, guid: ae7a099a8bfaf3d4795a5cf7e031ce4b, type: 2}
+    spawnAttribute: 0
+    enemyPrefab:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   leftBound: {fileID: 152786}
   rightBound: {fileID: 186894}
   range: 5
-  timeDelay: 2
+  timeDelay: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
