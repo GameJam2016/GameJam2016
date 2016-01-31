@@ -27,7 +27,7 @@ public class Shrine : MonoBehaviour
                 other.GetComponent<PlayerStatus>().TotalShinesVisited += 1;
             }
 
-            if (InputManager.Instance.GetKey("OpenInventory") && m_Inventory.activeInHierarchy == false)
+            if (InputManager.Instance.GetKey("OpenInventory") || Input.GetKeyDown(KeyCode.I) && m_Inventory.activeInHierarchy == false)
             {
                 m_Inventory.SetActive(true);
                 m_Inventory.GetComponent<InventoryHandler>().StartInventory();

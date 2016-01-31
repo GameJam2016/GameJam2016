@@ -116,7 +116,7 @@ Animator:
   m_GameObject: {fileID: 166250}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 22551d61bcffdce4396d9f87e8e61ba3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 217b70965488b444b912f29ba37c3813, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -231,6 +231,10 @@ Prefab:
       propertyPath: m_Name
       value: Natural Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 217b70965488b444b912f29ba37c3813, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 166250}

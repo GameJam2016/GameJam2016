@@ -51,7 +51,7 @@ public class EnemySpawner : MonoBehaviour
             spawning = false;
         }
 
-        if ((player.transform.position - this.transform.position).magnitude > 5)
+        if ((player.transform.position - this.transform.position).magnitude > 2)
         {
             playerNear = false;
         }

@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Golem Controller
+  m_Name: DemGolem Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Stationary
@@ -177,7 +177,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Natural Golem Walking
+  m_Name: Demon Golem Walking
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -191,7 +191,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 788aad55610c1d44c90ca48a38a56a19, type: 2}
+  m_Motion: {fileID: 7400000, guid: 40aa954a96130764ea9b17dde91530ce, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -202,7 +202,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Natural Golem Attacking
+  m_Name: Demon Golem Attacking
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -215,7 +215,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 55a7fc01c7239ed43a30042eed4f1430, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5d6a881d2e62b7b4aa6270ddce068789, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -226,7 +226,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Natural Golem Idle
+  m_Name: Demon Golem Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -240,7 +240,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5aa912549b2b5354b830df49ebcee1ad, type: 2}
+  m_Motion: {fileID: 7400000, guid: ebf41873ebd250c4eb96e74a33a6b06f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

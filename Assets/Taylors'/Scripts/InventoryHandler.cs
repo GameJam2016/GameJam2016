@@ -80,7 +80,7 @@ public class InventoryHandler : MonoBehaviour
 
     void CancelSelectedSpell()
     {
-        if(SelectedSpell && InputManager.Instance.GetKeyDown("CancelSelectedSpell") )
+        if(SelectedSpell && InputManager.Instance.GetKeyDown("CancelSelectedSpell") || Input.GetMouseButtonDown(1))//right click
         {
             //Make the image go back to default instead of null
             
@@ -141,7 +141,6 @@ public class InventoryHandler : MonoBehaviour
 
     public void FinalizeCustomizationOfSpells()
     {
-        Debug.Log("Booos[");
         for(int i = 0; i < EquiptedSpells.Length; i++)
         {
             SpellManagerObject.GetComponent<SpellManager>().SpellWheelImageArray[i].GetComponent<Image>().sprite = EquiptedSpells[i].GetComponent<Image>().sprite;

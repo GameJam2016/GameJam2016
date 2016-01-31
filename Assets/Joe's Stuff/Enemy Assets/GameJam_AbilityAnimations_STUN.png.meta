@@ -1,9 +1,42 @@
 fileFormatVersion: 2
 guid: c873a01d6adcdb84085f31b4521430f9
-timeCreated: 1454243727
+timeCreated: 1454247127
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: GameJam_AbilityAnimations_STUN_0
+    21300002: GameJam_AbilityAnimations_STUN_1
+    21300004: GameJam_AbilityAnimations_STUN_2
+    21300006: GameJam_AbilityAnimations_STUN_3
+    21300008: GameJam_AbilityAnimations_STUN_4
+    21300010: GameJam_AbilityAnimations_STUN_5
+    21300012: GameJam_AbilityAnimations_STUN_6
+    21300014: GameJam_AbilityAnimations_STUN_7
+    21300016: GameJam_AbilityAnimations_STUN_8
+    21300018: GameJam_AbilityAnimations_STUN_9
+    21300020: GameJam_AbilityAnimations_STUN_10
+    21300022: GameJam_AbilityAnimations_STUN_11
+    21300024: GameJam_AbilityAnimations_STUN_12
+    21300026: GameJam_AbilityAnimations_STUN_13
+    21300028: GameJam_AbilityAnimations_STUN_14
+    21300030: GameJam_AbilityAnimations_STUN_15
+    21300032: GameJam_AbilityAnimations_STUN_16
+    21300034: GameJam_AbilityAnimations_STUN_17
+    21300036: GameJam_AbilityAnimations_STUN_18
+    21300038: GameJam_AbilityAnimations_STUN_19
+    21300040: GameJam_AbilityAnimations_STUN_20
+    21300042: GameJam_AbilityAnimations_STUN_21
+    21300044: GameJam_AbilityAnimations_STUN_22
+    21300046: GameJam_AbilityAnimations_STUN_23
+    21300048: GameJam_AbilityAnimations_STUN_24
+    21300050: GameJam_AbilityAnimations_STUN_25
+    21300052: GameJam_AbilityAnimations_STUN_26
+    21300054: GameJam_AbilityAnimations_STUN_27
+    21300056: GameJam_AbilityAnimations_STUN_28
+    21300058: GameJam_AbilityAnimations_STUN_29
+    21300060: GameJam_AbilityAnimations_STUN_30
+    21300062: GameJam_AbilityAnimations_STUN_31
+    21300064: GameJam_AbilityAnimations_STUN_32
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,27 +62,542 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: GameJam_AbilityAnimations_STUN_0
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 149
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 73
+        width: 57
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: -40}
+        - {x: -23.5, y: -40}
+        - {x: -23.5, y: -37}
+        - {x: -25.5, y: -35}
+        - {x: -28.5, y: -35}
+      - - {x: 15.5, y: -37}
+        - {x: 15.5, y: -40}
+        - {x: 23.5, y: -40}
+        - {x: 23.5, y: -37}
+        - {x: 21.5, y: -35}
+        - {x: 17.5, y: -35}
+      - - {x: -23.5, y: 27}
+        - {x: -23.5, y: -21}
+        - {x: -10.5, y: -27}
+        - {x: 12.5, y: -27}
+        - {x: 23.5, y: -19}
+        - {x: 23.5, y: 18}
+        - {x: 8.5, y: 27}
+      - - {x: -28.5, y: -15}
+        - {x: -28.5, y: -23}
+        - {x: -25.5, y: -23}
+        - {x: -23.5, y: -21}
+        - {x: -23.5, y: -17}
+        - {x: -25.5, y: -15}
+      - - {x: 23.5, y: 6}
+        - {x: 23.5, y: 2}
+        - {x: 25.5, y: 0}
+        - {x: 28.5, y: 0}
+        - {x: 28.5, y: 8}
+        - {x: 25.5, y: 8}
+      - - {x: -1.5, y: 38}
+        - {x: -3.5, y: 36}
+        - {x: -3.5, y: 32}
+        - {x: -1.5, y: 30}
+        - {x: 1.5, y: 30}
+        - {x: 3.5, y: 32}
+        - {x: 3.5, y: 36}
+        - {x: 1.5, y: 38}
+      - - {x: 23.5, y: 40}
+        - {x: 23.5, y: 36}
+        - {x: 25.5, y: 34}
+        - {x: 28.5, y: 34}
+        - {x: 28.5, y: 40}
+    - name: GameJam_AbilityAnimations_STUN_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 145
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_3
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 145
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_4
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 138
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_5
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 138
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_6
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 92
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.5, y: 21.5}
+        - {x: -24.5, y: 19.5}
+        - {x: -27.5, y: 10.5}
+        - {x: -27.5, y: -26.5}
+        - {x: 23.5, y: -26.5}
+        - {x: 23.5, y: 21.5}
+      - - {x: 23.5, y: -22.5}
+        - {x: 23.5, y: -26.5}
+        - {x: 28.5, y: -26.5}
+        - {x: 28.5, y: -20.5}
+        - {x: 25.5, y: -20.5}
+      - - {x: 23.5, y: 11.5}
+        - {x: 23.5, y: 7.5}
+        - {x: 25.5, y: 5.5}
+        - {x: 28.5, y: 5.5}
+        - {x: 28.5, y: 13.5}
+        - {x: 25.5, y: 13.5}
+      - - {x: -28.5, y: 17.5}
+        - {x: -28.5, y: 9.5}
+        - {x: -25.5, y: 9.5}
+        - {x: -23.5, y: 11.5}
+        - {x: -23.5, y: 15.5}
+        - {x: -25.5, y: 17.5}
+      - - {x: -0.5, y: 26.5}
+        - {x: -0.5, y: 23.5}
+        - {x: 1.5, y: 21.5}
+        - {x: 5.5, y: 21.5}
+        - {x: 7.5, y: 23.5}
+        - {x: 7.5, y: 26.5}
+    - name: GameJam_AbilityAnimations_STUN_7
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 138
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_8
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 138
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_9
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 92
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 9.5}
+        - {x: -23, y: -26.5}
+        - {x: 20, y: -26.5}
+        - {x: 23, y: -25.5}
+        - {x: 23, y: 21.5}
+        - {x: -3, y: 21.5}
+        - {x: -19, y: 17.5}
+      - - {x: 2, y: 26.5}
+        - {x: 2, y: 23.5}
+        - {x: 4, y: 21.5}
+        - {x: 8, y: 21.5}
+        - {x: 10, y: 23.5}
+        - {x: 10, y: 26.5}
+    - name: GameJam_AbilityAnimations_STUN_10
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 92
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 21}
+        - {x: -28.5, y: -19}
+        - {x: -25.5, y: -21}
+        - {x: 11.5, y: -21}
+        - {x: 19.5, y: -10}
+        - {x: 19.5, y: 21}
+      - - {x: 16.5, y: -12}
+        - {x: 15.5, y: -14}
+        - {x: 15.5, y: -18}
+        - {x: 17.5, y: -19}
+        - {x: 22.5, y: -19}
+        - {x: 23.5, y: -17}
+        - {x: 23.5, y: -13}
+        - {x: 21.5, y: -12}
+      - - {x: 23.5, y: 13}
+        - {x: 23.5, y: 9}
+        - {x: 25.5, y: 7}
+        - {x: 28.5, y: 7}
+        - {x: 28.5, y: 15}
+        - {x: 25.5, y: 15}
+    - name: GameJam_AbilityAnimations_STUN_11
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 92
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.5, y: 23}
+        - {x: -11.5, y: 23}
+        - {x: -17.5, y: 17}
+        - {x: -17.5, y: -18}
+        - {x: -8.5, y: -23}
+        - {x: 24.5, y: -23}
+        - {x: 27.5, y: -22}
+        - {x: 27.5, y: 17}
+      - - {x: -27.5, y: -14}
+        - {x: -27.5, y: -21}
+        - {x: -23.5, y: -21}
+        - {x: -21.5, y: -19}
+        - {x: -21.5, y: -16}
+        - {x: -23.5, y: -14}
+      - - {x: -24.5, y: 21}
+        - {x: -25.5, y: 19}
+        - {x: -25.5, y: 15}
+        - {x: -24.5, y: 13}
+        - {x: -19.5, y: 13}
+        - {x: -17.5, y: 14}
+        - {x: -17.5, y: 21}
+    - name: GameJam_AbilityAnimations_STUN_12
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 130
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_13
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 92
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.5, y: -17}
+        - {x: -29.5, y: -21}
+        - {x: -21.5, y: -21}
+        - {x: -21.5, y: -17}
+        - {x: -23.5, y: -15}
+        - {x: -27.5, y: -15}
+      - - {x: -15.5, y: 21}
+        - {x: -21.5, y: 15}
+        - {x: -21.5, y: -15}
+        - {x: -15.5, y: -21}
+        - {x: 21.5, y: -21}
+        - {x: 28.5, y: -9}
+        - {x: 28.5, y: 15}
+        - {x: 27.5, y: 21}
+      - - {x: 24.5, y: -14}
+        - {x: 24.5, y: -17}
+        - {x: 26.5, y: -19}
+        - {x: 30.5, y: -19}
+        - {x: 30.5, y: -12}
+        - {x: 26.5, y: -12}
+      - - {x: -30.5, y: 0}
+        - {x: -30.5, y: -8}
+        - {x: -27.5, y: -8}
+        - {x: -25.5, y: -6}
+        - {x: -25.5, y: -2}
+        - {x: -27.5, y: 0}
+    - name: GameJam_AbilityAnimations_STUN_14
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 130
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_15
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 126
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_16
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 126
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_17
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 126
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_18
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 122
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_19
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 107
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_20
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 103
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_21
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 103
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 88
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_23
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 92
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_24
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 92
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_25
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 88
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_26
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 92
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_27
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 61
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_28
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 80
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_29
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 73
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_30
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 80
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_31
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 76
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: GameJam_AbilityAnimations_STUN_32
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 61
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

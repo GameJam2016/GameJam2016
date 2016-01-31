@@ -60,7 +60,7 @@ public class SpellManager : MonoBehaviour
     void RotateAbilityRevolver()
     {
         //This changes the revolvers 
-        if (InputManager.Instance.GetKeyDown("RevolverLeft") && canChangeSpell == true)//right
+        if (InputManager.Instance.GetKeyDown("RevolverLeft") || Input.GetKeyDown(KeyCode.O) && canChangeSpell == true)//right
         {
             canChangeSpell = false;
             StartCoroutine(SpellChangeDelay());
@@ -144,7 +144,7 @@ public class SpellManager : MonoBehaviour
                     break;
             }
         }
-        else if (InputManager.Instance.GetKeyDown("RevolverRight") && canChangeSpell == true)//left
+        else if (InputManager.Instance.GetKeyDown("RevolverRight") || Input.GetKeyDown(KeyCode.P) && canChangeSpell == true)//left
         {
             canChangeSpell = false;
             StartCoroutine(SpellChangeDelay());
