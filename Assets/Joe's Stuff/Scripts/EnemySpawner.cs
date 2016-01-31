@@ -106,15 +106,14 @@ public class EnemySpawner : MonoBehaviour
             if (timePassed > timeLimit)
             {
                 timePassed = 0;
-                for (int x = 0; x < toSpawn.spawnNumber; x++)
-                {
-                    location = Random.insideUnitCircle * range;
-                    spawnThing = Instantiate(toSpawn.enemyPrefab, location, Quaternion.identity) as GameObject;
-                    spawnThing.GetComponent<Enemy>().leftBound = leftBound;
-                    spawnThing.GetComponent<Enemy>().rightBound = rightBound;
-                    spawnThing.GetComponent<Enemy>().spawner = this.gameObject;
-                }
+                toSpawn.spawnNumber--;
+                location = Random.insideUnitCircle * range;
+                location.y = Mathf.Abs(location.y);
+                spawnThing = Instantiate(toSpawn.enemyPrefab, location, Quaternion.identity) as GameObject;
+                spawnThing.GetComponent<Enemy>().leftBound = leftBound;
+                spawnThing.GetComponent<Enemy>().rightBound = rightBound;
+                spawnThing.GetComponent<Enemy>().spawner = this.gameObject;
             }
-        } while (onScreen && !playerNear);
+        } while (onScreen && !playerNear && toSpawn.spawnNumber != 0);
     }
 }

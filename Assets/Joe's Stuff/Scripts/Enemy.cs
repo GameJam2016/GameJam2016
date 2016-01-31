@@ -63,7 +63,7 @@ public class Enemy : DamageableObject
         }
 
         // If we're already crowd controlled, or we're outside it's range of influence, never mind.
-        if (crowdControlled || toSource.magnitude > manaCost)
+        if (crowdControlled)
         {
                 
         }
@@ -96,7 +96,7 @@ public class Enemy : DamageableObject
             myRigid.AddForce(toSource);
 
             // We start our crowd control cooldown.
-            StartCoroutine(crowdControlling(crowdTime));
+            StartCoroutine(crowdControlling(source));
         }
 
         // If it's Demonic crowd control
@@ -127,7 +127,7 @@ public class Enemy : DamageableObject
             myRigid.AddForce(toSource);
 
             // We start our crowd control cooldown.
-            StartCoroutine(crowdControlling(crowdTime));
+            StartCoroutine(crowdControlling(source));
         }
 
         // If it's Natural crowd control
@@ -152,10 +152,10 @@ public class Enemy : DamageableObject
             }
             
             // We start our crowd control cooldown.
-            StartCoroutine(crowdControlling(crowdTime));
+            StartCoroutine(crowdControlling(source));
 
             // We start our slow timer
-            StartCoroutine(slow(crowdTime, manaCost * slowScalar));
+            StartCoroutine(slow(manaCost * slowScalar, source));
         }
     }
 
@@ -165,32 +165,28 @@ public class Enemy : DamageableObject
     }
 
     // How long we are crowd controlled.
-    IEnumerator crowdControlling(float timeLimit)
+    IEnumerator crowdControlling(GameObject source)
     {
-        float timePassed = 0;
         stunned = true;
         crowdControlled = true;
         do
         {
-            timePassed += Time.deltaTime;
             yield return null;
-        } while (timePassed <= timeLimit);
+        } while (source != null);
         crowdControlled = false;
         stunned = false;
     }
 
     // How long we are slowed.
-    IEnumerator slow(float timeLimit, float theSlow)
+    IEnumerator slow(float theSlow, GameObject source)
     {
-        float timePassed = 0;
         moveSpeed = moveSpeed / theSlow;
         stunned = true;
         do
         {
-            timePassed += Time.deltaTime;
             yield return null;
-        } while (timePassed <= timeLimit);
-        moveSpeed = moveSpeed * theSlow;
+        } while (source != null);
+        moveSpeed = startSpeed;
         stunned = false;
     }
 
